@@ -2,7 +2,7 @@
 
 **Plate heat exchanger (PHE) gaskets, plates and units in Medan, Indonesia**
 
-CV. Agrindo Lestari supplies plate heat exchangers, parts and retrofits to process industries across Indonesia. Gaskets and plates are matched to your unit's brand, model and serial number.
+Agrindo Lestari supplies plate heat exchangers, parts and retrofits to process industries across Indonesia. Gaskets and plates are matched to your unit's brand, model and serial number.
 
 **Website:** https://agrindolestari.github.io
 
