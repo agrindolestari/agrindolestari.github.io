@@ -1844,6 +1844,22 @@ footer .logo b{font-size:1.25rem;letter-spacing:-.01em}
   footer .copy{flex-direction:column;align-items:center;text-align:center;gap:6px;padding-bottom:70px}
 }
 @media(max-width:640px){.tc19 img.fit19{--k:.68!important}.tc19{height:76px!important}.tc15-wm{font-size:.82rem!important}}
+/* ===== round 26: product page tables, tabs, applications, service cards on phones ===== */
+.art-main table th,.art-main table td{word-break:normal!important;overflow-wrap:normal!important;hyphens:none!important}
+@media(max-width:640px){
+  .art-main table,.art-main table tbody{display:block;width:100%}
+  .art-main table tr{display:block;border-bottom:1px solid var(--line)}
+  .art-main table tr:last-child{border-bottom:0}
+  .art-main table th,.art-main table td{display:block;width:auto!important;border:0!important;text-align:left}
+  .art-main table th{padding:14px 18px 2px!important;font-size:.78rem!important;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#6b766f;background:none!important}
+  .art-main table td{padding:0 18px 14px!important;font-size:.98rem;line-height:1.5}
+  .art-main .tabs{display:flex!important;flex-wrap:nowrap!important;gap:4px;padding:4px!important;overflow:visible}
+  .art-main .tabs button{flex:1 1 auto;min-width:0;padding:11px 8px!important;font-size:.84rem!important;text-align:center;letter-spacing:0}
+  .apps{grid-template-columns:1fr!important;gap:10px!important}
+  .apps div{border-radius:0!important;padding:15px 18px!important;justify-content:flex-start!important;text-align:left;line-height:1.35;min-height:0!important}
+  .svc12{grid-template-columns:56px 1fr!important;column-gap:18px!important;align-items:start}
+  .svc12 .sic{width:56px;height:56px}
+}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFHBXH0L4"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-1BFHBXH0L4");addEventListener("hashchange",function(){gtag("event","page_view",{page_location:location.href,page_title:document.title});});</script>
