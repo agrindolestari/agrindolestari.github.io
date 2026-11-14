@@ -1886,6 +1886,9 @@ html,body{background-color:#fff}
   .pcard11,.pbody11{min-width:0}
 }
 @media(max-width:360px){html,body{overflow-x:clip}}
+/* round 28c: logo tiles and product pictures sit on a white image, which phone dark modes leave untouched */
+.oem19,.tc19:not(:has(.tc15-wm)),.pc14-img,.ph,.oth19-im,.pimg11{background-color:#fff;background-image:url(images/w.png)!important;background-size:cover!important;background-position:center!important}
+html{-webkit-tap-highlight-color:transparent}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFHBXH0L4"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-1BFHBXH0L4");addEventListener("hashchange",function(){gtag("event","page_view",{page_location:location.href,page_title:document.title});});</script>
@@ -4511,6 +4514,21 @@ T.en.trustLead = "Some of the companies we have supplied with plate heat exchang
 T.id.trustLead = "Beberapa perusahaan yang pernah kami suplai gasket, plate dan suku cadang plate heat exchanger.";
 T.zh.trustLead = "我们曾为以下部分企业供应板式换热器垫片、板片及备件。";
 if (T.en.credLead) { T.en.credLead = T.en.trustLead; T.id.credLead = T.id.trustLead; T.zh.credLead = T.zh.trustLead; }
+// round 28: on touch screens, hover effects stick after a tap and make plain cards look clickable; remove them
+(function(){
+  if (!window.matchMedia || !matchMedia("(hover: none)").matches) return;
+  function strip(list, owner){
+    for (let i = list.length - 1; i >= 0; i--){
+      const r = list[i];
+      if (r.cssRules && !r.selectorText) { strip(r.cssRules, r); continue; }
+      if (!r.selectorText || r.selectorText.indexOf(":hover") < 0) continue;
+      const keep = r.selectorText.split(",").filter(x => x.indexOf(":hover") < 0);
+      if (keep.length) { try { r.selectorText = keep.join(","); } catch(e){} }
+      else { try { owner.deleteRule(i); } catch(e){} }
+    }
+  }
+  for (const s of document.styleSheets){ try { strip(s.cssRules, s); } catch(e){} }
+})();
 
 $("#yr").textContent = new Date().getFullYear();
 $$(".lang button").forEach(b => b.onclick = () => { lang = b.dataset.lang; try { localStorage.setItem("agl-lang", lang); } catch(e) {} render(); });
