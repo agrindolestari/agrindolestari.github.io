@@ -17,6 +17,7 @@
 <meta property="og:title" content="PHE Plates: Stainless Steel &amp; Titanium | Agrindo Lestari">
 <meta property="og:description" content="Replacement plate heat exchanger plates in AISI 304, 316L, titanium, SMO 254 and Hastelloy, matched to the original pattern for all major brands.">
 <meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="id_ID">
+<meta name="color-scheme" content="only light">
 <meta name="theme-color" content="#0e4d2c">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"CV. Agrindo Lestari","description":"Supplier of plate heat exchanger gaskets, plates and units, spiral heat exchangers and graphite materials for industry across Indonesia.","foundingDate":"2003",
@@ -1874,6 +1875,18 @@ footer .logo b{font-size:1.25rem;letter-spacing:-.01em}
   .pc14-grid .pc14:nth-child(n+4){grid-column:span 3}
   .pc14-grid .pc14:nth-child(n+4) .pc14-img{aspect-ratio:2/1!important}
 }
+/* ===== round 28: keep the designed light look when phones force dark mode; very small phones ===== */
+:root{color-scheme:only light}
+html,body{background-color:#fff}
+@media(max-width:360px){
+  nav .wrap,.wrap.nav,header .wrap{gap:10px}
+  .logo b,.tc15-wm{font-size:1.02rem!important}
+  .logo-mark{width:38px!important;height:30px!important}
+  .hero12-l,.hero12-l *{min-width:0;max-width:100%}
+  .hero12-l h1{overflow-wrap:break-word;font-size:2rem!important}
+  .pcard11,.pbody11{min-width:0}
+}
+@media(max-width:360px){html,body{overflow-x:clip}}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFHBXH0L4"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-1BFHBXH0L4");addEventListener("hashchange",function(){gtag("event","page_view",{page_location:location.href,page_title:document.title});});</script>
