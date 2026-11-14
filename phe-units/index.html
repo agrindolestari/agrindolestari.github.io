@@ -1890,6 +1890,10 @@ html,body{background-color:#fff}
 /* round 28c: logo tiles and product pictures sit on a white image, which phone dark modes leave untouched */
 .oem19,.tc19:not(:has(.tc15-wm)),.pc14-img,.ph,.oth19-im,.pimg11{background-color:#fff;background-image:url(images/w.png)!important;background-size:cover!important;background-position:center!important}
 html{-webkit-tap-highlight-color:transparent}
+/* round 29: white image layer behind logos and product pictures */
+.oem19,.tc19,.pc14-img,.ph,.oth19-im,.pimg11{position:relative;overflow:hidden}
+.wb29{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:fill!important;padding:0!important;margin:0!important;border:0!important;z-index:0;pointer-events:none;transform:none!important;filter:none!important}
+.oem19>img:not(.wb29),.tc19>img:not(.wb29),.pc14-img>img:not(.wb29),.ph>img:not(.wb29),.oth19-im>img:not(.wb29),.pimg11>img:not(.wb29),.tc19>*:not(.wb29){position:relative;z-index:1}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFHBXH0L4"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-1BFHBXH0L4");addEventListener("hashchange",function(){gtag("event","page_view",{page_location:location.href,page_title:document.title});});</script>
@@ -4530,6 +4534,18 @@ if (T.en.credLead) { T.en.credLead = T.en.trustLead; T.id.credLead = T.id.trustL
   }
   for (const s of document.styleSheets){ try { strip(s.cssRules, s); } catch(e){} }
 })();
+// round 29: Sinar Laut as an image (stays readable in dark mode); white boxes are real images so Samsung dark mode keeps them white
+{ const s = CUST19.find(c => /^Sinar Laut/.test(c[0])); if (s) s[1] = "images/cust/sinar-laut.png"; }
+function wb29(){
+  document.querySelectorAll(".oem19,.tc19,.pc14-img,.ph,.oth19-im,.pimg11").forEach(t => {
+    if (t.querySelector(":scope > .wb29")) return;
+    const w = document.createElement("img"); w.className = "wb29"; w.src = "images/w.png"; w.alt = ""; w.setAttribute("aria-hidden", "true");
+    t.insertBefore(w, t.firstChild);
+  });
+}
+const _render29 = render; render = function(){ _render29(); wb29(); };
+addEventListener("hashchange", () => setTimeout(wb29, 60));
+addEventListener("load", () => setTimeout(wb29, 300));
 
 $("#yr").textContent = new Date().getFullYear();
 $$(".lang button").forEach(b => b.onclick = () => { lang = b.dataset.lang; try { localStorage.setItem("agl-lang", lang); } catch(e) {} render(); });
