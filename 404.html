@@ -1930,6 +1930,7 @@ html{-webkit-tap-highlight-color:transparent}
 @media (max-width:640px){.eyebrow[data-i18n="heroEyebrow"]{font-size:.7rem}}
 @media (max-width:360px){.eyebrow[data-i18n="heroEyebrow"]{font-size:.62rem}}
 .li33{display:inline-flex;align-items:center;gap:9px;color:inherit;text-decoration:none}.li33:hover span{text-decoration:underline}.li33 svg{flex:0 0 18px;color:#e6ece8}
+.also34{font-size:.9rem;margin-top:8px!important;opacity:.9}.also34 b{color:#f5c400}
 </style>
 <script>if(location.hostname==="agrindolestari.github.io"){var s=document.createElement("script");s.async=1;s.src="https://www.googletagmanager.com/gtag/js?id=G-1BFHBXH0L4";document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag("js",new Date());gtag("config","G-1BFHBXH0L4");addEventListener("hashchange",function(){gtag("event","page_view",{page_location:location.href,page_title:document.title});});}</script>
 <meta name="google-site-verification" content="M20Ci52eR5CdUbxVOi6yWMHlW7NEDv_aOt4JY5xxwos">
@@ -4668,13 +4669,13 @@ const FG32 = {en:"Food-grade (FDA-compliant) NBR and EPDM available for food, be
 })();
 
 // ---------- industries: gasket and plate materials in two boxes ----------
-const IND32 = [ // [gaskets, plates] per industry, same order as T.inds
+const IND32 = [ // [gaskets, plates] per industry, same order as T.inds; must equal the material guide (SUIT) for the matching medium
   [["NBR","NBR P","HTNBR","HNBR","Viton A","Viton G"], ["AISI 316L"]],
-  [["EPDM","Viton A","Viton G"], ["Titanium","SMO 254","Hastelloy C-276","Nickel 200/201"]],
-  [["Food-grade NBR","Food-grade EPDM"], ["AISI 316L"]],
+  [["HNBR","EPDM","Viton A","Viton G"], ["Titanium","SMO 254","Hastelloy C-276","Nickel 200/201"]],
   [["Food-grade NBR","Food-grade EPDM","HNBR","Viton A","Viton G"], ["AISI 316L"]],
-  [["NBR","EPDM"], ["AISI 316L","Titanium"]],
-  [["NBR","EPDM"], ["Titanium"]]
+  [["Food-grade NBR","Food-grade EPDM","HNBR","Viton A","Viton G"], ["AISI 316L"]],
+  [["NBR","EPDM","Viton G"], ["AISI 316L","Titanium"]],
+  [["NBR","EPDM","Viton G"], ["Titanium"]]
 ];
 const FGW32 = {en:"Food-grade", id:"Food-grade", zh:"食品级"};
 function ind32(){
@@ -4759,6 +4760,35 @@ renderArticle = function(id){
 // industries: the "Other applications" card had its own "Request a quotation" right above the page-wide one; keep only the band below
 (function(){ const _r = render; render = function(){ _r(); const c = document.querySelector("#indGrid a.ind11-cta"); if (!c) return;
   const d = document.createElement("div"); d.className = c.className; d.innerHTML = c.innerHTML; const s = d.querySelector("span"); if (s) s.remove(); c.replaceWith(d); }; })();
+
+// ---------- round 34: material guide = industries lists ----------
+// Fats and Oils -> oil; Chemical & Oleochemical -> chem + glyc; Food & Beverage, Dairy -> food; Power, Marine -> water
+Object.assign(SUIT, {
+  oil:["NBR","NBR P","HTNBR","HNBR","Viton A","Viton G"],
+  glyc:["HNBR","Viton A","Viton G"],
+  chem:["EPDM","Viton A","Viton G"],
+  food:["NBR","EPDM","HNBR","Viton A","Viton G"],
+  water:["EPDM","NBR","Viton G"]});
+if (typeof IND_MEDIA !== "undefined") { IND_MEDIA.length = 0; IND_MEDIA.push("oil","chem","food","food","water","water"); }
+Object.assign(T.en, {fdAlso:"Also suitable", fdFood:"Food-grade (FDA-compliant) NBR and EPDM available."});
+Object.assign(T.id, {fdAlso:"Juga cocok", fdFood:"Tersedia NBR dan EPDM food-grade (sesuai FDA)."});
+Object.assign(T.zh, {fdAlso:"同样适用", fdFood:"可提供食品级（符合 FDA）NBR 和 EPDM。"});
+finder = function(){
+  const t = L(), tr = $("#temp"); if (!tr) return;
+  tr.max = 180; if (+tr.value > 180) tr.value = 180;
+  const temp = +tr.value; $("#tempOut").textContent = temp + " °C";
+  const ok = SUIT[media] || [];
+  const fit = ok.filter(m => MAT[m] && MAT[m][1] >= temp && MAT[m][0] <= temp);
+  const best = fit[0];
+  const pct = v => ((v + 40) / 240 * 100);
+  const bars = Object.keys(MAT).map(m => `<div class="rb ${m===best?'best':''}" style="opacity:${ok.includes(m)?1:.3}"><span>${m}</span><div class="track"><div class="fill" style="left:${pct(MAT[m][0])}%;width:${pct(MAT[m][1])-pct(MAT[m][0])}%"></div><div class="mark" style="left:${pct(temp)}%"></div></div></div>`).join("");
+  const also = fit.slice(1);
+  const head = best
+    ? `<div class="mat">${best}</div><div class="full">${t.matD[best][0]}</div><p>${t.matD[best][1]}</p>${also.length ? `<p class="also34"><b>${t.fdAlso}:</b> ${also.join(", ")}</p>` : ""}${media === "food" ? `<p class="also34">${t.fdFood}</p>` : ""}`
+    : `<div class="mat" style="font-size:2.2rem">${t.fdBeyond}</div><p>${t.fdBeyondD}</p>`;
+  $("#result").innerHTML = `<small>${t.fdRec}</small>${head}<div class="res-bars">${bars}</div>
+    <a href="#contact" class="btn btn-y" onclick="prefill('${best||''}')">${t.fdTalk} <span class="arrow">→</span></a><p class="disc">${t.fdDisc}</p>`;
+};
 
 $("#yr").textContent = new Date().getFullYear();
 $$(".lang button").forEach(b => b.onclick = () => { lang = b.dataset.lang; try { localStorage.setItem("agl-lang", lang); } catch(e) {} render(); });
