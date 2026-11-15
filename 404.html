@@ -4755,6 +4755,9 @@ renderArticle = function(id){
 };
 // back to top: inline onclick resolved to the button's own scrollTo, so the page never moved
 (function(){ const b = document.getElementById("totop"); if (b) b.onclick = () => window.scrollTo({top:0, behavior:"smooth"}); })();
+// industries: the "Other applications" card had its own "Request a quotation" right above the page-wide one; keep only the band below
+(function(){ const _r = render; render = function(){ _r(); const c = document.querySelector("#indGrid a.ind11-cta"); if (!c) return;
+  const d = document.createElement("div"); d.className = c.className; d.innerHTML = c.innerHTML; const s = d.querySelector("span"); if (s) s.remove(); c.replaceWith(d); }; })();
 
 $("#yr").textContent = new Date().getFullYear();
 $$(".lang button").forEach(b => b.onclick = () => { lang = b.dataset.lang; try { localStorage.setItem("agl-lang", lang); } catch(e) {} render(); });
