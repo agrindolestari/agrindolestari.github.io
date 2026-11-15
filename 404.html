@@ -4641,9 +4641,9 @@ const FG32 = {en:"Food-grade (FDA-compliant) NBR and EPDM available for food, be
   PRODUCTS.forEach(p => { if (p.apps && p.apps.en && p.apps.en[0] === "Palm oil refineries") p.apps = JSON.parse(JSON.stringify(APPS32)); });
   if (typeof PS19 !== "undefined" && PS19["phe-gaskets"]) PS19["phe-gaskets"] = {en:"NBR to Viton, clip-on or glued", id:"NBR hingga Viton, clip-on atau lem", zh:"NBR 至氟橡胶，卡扣式或粘接式"};
   // services: no claim of in-house production
-  const SV = {en:["Gaskets made to order","Made to match your plate model in NBR, NBR P, HTNBR, HNBR, EPDM or Viton A / G, including food-grade (FDA-compliant) grades."],
-              id:["Gasket sesuai pesanan","Disesuaikan dengan model plate Anda, dari NBR, NBR P, HTNBR, HNBR, EPDM atau Viton A / G, termasuk grade food-grade (sesuai FDA)."],
-              zh:["按需定制垫片","按您的板片型号匹配，材质可选 NBR、NBR P、HTNBR、HNBR、EPDM 或 Viton A / G，包括符合 FDA 的食品级。"]};
+  const SV = {en:["Custom-made gaskets","Made to match your plate model in NBR, NBR P, HTNBR, HNBR, EPDM or Viton A / G, including food-grade (FDA-compliant) grades."],
+              id:["Gasket custom made","Disesuaikan dengan model plate Anda, dari NBR, NBR P, HTNBR, HNBR, EPDM atau Viton A / G, termasuk grade food-grade (sesuai FDA)."],
+              zh:["定制垫片","按您的板片型号匹配，材质可选 NBR、NBR P、HTNBR、HNBR、EPDM 或 Viton A / G，包括符合 FDA 的食品级。"]};
   ["en","id","zh"].forEach(l => { if (Array.isArray(T[l].svcs) && T[l].svcs[1]) T[l].svcs[1] = SV[l]; });
   // 3D model: part 3 is the whole unit, not the bolts on their own
   Object.assign(T.en.hs3d.frame, {t:"Complete PHE unit", d:"Frame, tightening bolts, plates and gaskets together make a complete unit. We supply new units sized to your process data.", a:"View PHE units"});
