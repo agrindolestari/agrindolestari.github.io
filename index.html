@@ -1923,6 +1923,10 @@ html{-webkit-tap-highlight-color:transparent}
 #matGaskets .mt12:last-child:nth-child(odd){grid-column:1/-1}
 .ind32-m{grid-template-columns:1fr}.ind12-m.ind32-m span{white-space:nowrap}
 .tc19 img[alt="Sinar Laut"]{transform:scale(.7)}
+.oem19 img[alt="Kelvion"],.oem19 img[alt="Sondex"],.oem19 img[alt="API Schmidt-Bretten"]{transform:scale(1.2)}
+.eyebrow[data-i18n="heroEyebrow"]{font-size:.88rem}
+@media (max-width:640px){.eyebrow[data-i18n="heroEyebrow"]{font-size:.7rem}}
+@media (max-width:360px){.eyebrow[data-i18n="heroEyebrow"]{font-size:.62rem}}
 </style>
 <script>if(location.hostname==="agrindolestari.github.io"){var s=document.createElement("script");s.async=1;s.src="https://www.googletagmanager.com/gtag/js?id=G-1BFHBXH0L4";document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag("js",new Date());gtag("config","G-1BFHBXH0L4");addEventListener("hashchange",function(){gtag("event","page_view",{page_location:location.href,page_title:document.title});});}</script>
 <meta name="google-site-verification" content="M20Ci52eR5CdUbxVOi6yWMHlW7NEDv_aOt4JY5xxwos">
@@ -2197,9 +2201,9 @@ const PRODUCTS = [
            ["Quantity","From one piece to full sets","Jumlah","数量"],
            ["Availability","Fast-moving sizes often in ready stock","Ketersediaan","供货情况"],
            ["Support","Material selection by our specialists","Dukungan","技术支持"]],
-   apps:{en:["Palm oil refineries","Oleochemical plants","Food & beverage lines","Fragrance & flavour production"],
-         id:["Refinery minyak sawit","Pabrik oleokimia","Lini makanan & minuman","Produksi fragrance & flavour"],
-         zh:["棕榈油精炼厂","油脂化工厂","食品饮料生产线","香精香料生产"]}},
+   apps:{en:["Vegetable oil refineries","Oleochemical plants","Food & beverage lines","Fragrance & flavour production"],
+         id:["Refinery minyak nabati","Pabrik oleokimia","Lini makanan & minuman","Produksi fragrance & flavour"],
+         zh:["植物油精炼厂","油脂化工厂","食品饮料生产线","香精香料生产"]}},
 
  { id:"phe-plates", cat:"phe", pic:"plate",
    name:{en:"PHE Plates", id:"Plate PHE", zh:"板式换热器板片"},
@@ -2295,9 +2299,9 @@ const PRODUCTS = [
    supply:[["Send us","Flow rates, inlet/outlet temperatures, media, pressure","Kirimkan kepada kami","请提供"],
            ["Support","Selection, installation advice & after-sales","Dukungan","技术支持"],
            ["Spare parts","Plates & gaskets from the same team","Suku cadang","备件"]],
-   apps:{en:["Palm oil & fats processing","Food & beverage","Generating sets & engines","General industry"],
-         id:["Pengolahan minyak sawit & lemak","Makanan & minuman","Genset & mesin","Industri umum"],
-         zh:["棕榈油及油脂加工","食品饮料","发电机组及发动机","通用工业"]}}
+   apps:{en:["Vegetable oil & fats processing","Food & beverage","Generating sets & engines","General industry"],
+         id:["Pengolahan minyak nabati & lemak","Makanan & minuman","Genset & mesin","Industri umum"],
+         zh:["植物油及油脂加工","食品饮料","发电机组及发动机","通用工业"]}}
 ];
 const CATS = {all:{en:"All products",id:"Semua produk",zh:"全部产品"}, sealing:{en:"Gaskets & Sealing",id:"Gasket & Sealing",zh:"垫片与密封"}, phe:{en:"Heat Exchangers",id:"Heat Exchanger",zh:"换热器"}};
 
@@ -2324,14 +2328,14 @@ en:{
  aboutKicker:"Our Story", aboutTitle:"It started with <em>generators.</em><br>It grew into heat transfer.",
  story1:"CV. Agrindo Lestari was founded in Medan in 2003. In the early years we imported, supplied and serviced generating sets — for clients across Indonesia and abroad — as the authorised distributor of BURG Hankering from Europe.",
  story2:"Working inside our clients' plants, we kept seeing the same problems: leaking heat exchangers, worn-out gaskets, and spare parts that took months to arrive. So we started solving them — first for non-food industry, then for more and more sectors.",
- story3:"Today we are the partner that palm oil refineries, chemical plants, food & beverage producers and fragrance makers call when their heat exchangers need the right part, fast.",
+ story3:"Today we are the partner that vegetable oil refineries, chemical plants, food & beverage producers and fragrance makers call when their heat exchangers need the right part, fast.",
  motto:"Think <span>globally.</span> Act <span>locally.</span>",
  mottoD:"That's how our clients describe us: world-class products and know-how from abroad, delivered with the speed and care of a partner just around the corner.",
  journeyT:"Our journey — tap each step",
  journey:[["2003","Where it all began","Founded in Medan as authorised distributor of BURG Hankering — importing, supplying and servicing generating sets, locally and internationally.","gen"],
           ["Next","From power to process","Solving leaks and breakdowns on site led us into plate heat exchanger spare parts, starting with non-food industry.","phe"],
-          ["Growth","Into palm oil","Became a go-to supplier for palm oil refineries and their downstream producers across Sumatra.","palm"],
-          ["Today","Many industries, one partner","Serving palm oil, oleochemical, chemical, food & beverage and fragrance industries with parts from 12 countries.","globe"]],
+          ["Growth","Into vegetable oil","Became a go-to supplier for vegetable oil refineries and their downstream producers across Sumatra.","palm"],
+          ["Today","Many industries, one partner","Serving vegetable oil, oleochemical, chemical, food & beverage and fragrance industries with parts from 12 countries.","globe"]],
  msKicker:"Milestones & Credibility", msTitle:"Two decades of <em>trust</em>, earned plant by plant.",
  msLead:"Numbers tell part of the story. The rest is the long-term relationships we've built with some of Indonesia's biggest industrial names.",
  st1:"Founded in Medan", st2:"Years of hands-on experience", st3:"Sourcing countries", st4:"PHE brands supported", st5:"Core industries served",
@@ -2339,7 +2343,7 @@ en:{
  contractD:"",
  sealTxt:"",
  clientsT:"Trusted by industry leaders", clientsHint:"Hover or tap a logo to learn more",
- c1:["Palm oil & oleochemicals","Refining & downstream"], c2:["Agribusiness & food","Plantation & processing"], c3:["Plantation & palm oil","Processing"], c4:["Food & beverage","Bottling operations"],
+ c1:["Vegetable oil & oleochemicals","Refining & downstream"], c2:["Agribusiness & food","Plantation & processing"], c3:["Plantation & vegetable oil","Processing"], c4:["Food & beverage","Bottling operations"],
  brandsT:"Brands we supply parts for", brandsNote:"Brand names are trademarks of their respective owners and are shown to indicate compatibility.",
  prodKicker:"Products", prodTitle:"Everything your <em>heat exchanger</em> needs.", prodLead:"Tap a product to open its full technical sheet — materials, temperature limits, compatible brands and what we need to quote.",
  viewSpecs:"View details", coreBadge:"★ Core product",
@@ -2362,7 +2366,7 @@ en:{
  srcT:"Sourced from 12 countries", srcD:"We work directly with manufacturers across Europe and Asia — so you get genuine quality without the complexity of importing.",
  r1:"Trusted manufacturer", r2:"Quality check", r3:"Import & customs", r4:"Your plant in Indonesia",
  indKicker:"Industries", indTitle:"Built for the industries that <em>never stop.</em>", indLead:"Select an industry to see where our parts work — and which products keep it running.",
- inds:[["Palm Oil & Downstream","Heat & fatty media","Refining, fractionation and deodorisation run hot, around the clock. Every gasket and plate must hold up against heat and fatty media.",["Oil-to-oil heat recovery","Deodoriser & fractionation cooling","Thermal oil & steam lines"],["phe-gaskets","phe-plates","graphite"],"palm",false],
+ inds:[["Vegetable Oil & Downstream","Heat & fatty media","Refining, fractionation and deodorisation run hot, around the clock. Every gasket and plate must hold up against heat and fatty media.",["Oil-to-oil heat recovery","Deodoriser & fractionation cooling","Thermal oil & steam lines"],["phe-gaskets","phe-plates","graphite"],"palm",false],
        ["Chemical & Oleochemical","Aggressive media","Corrosive chemicals and high temperatures demand the right alloy and elastomer — chosen with care.",["Fatty acid & glycerine cooling","Acid and solvent duties","Process heating & cooling"],["phe-plates","phe-gaskets","seals"],"chem",false],
        ["Food & Beverage","Hygiene first","Consistent quality and food safety. Food-grade gaskets and stainless plates for pasteurising, chilling and CIP.",["Pasteurisation","Product chilling","CIP cleaning systems"],["phe-gaskets","phe-plates","phe-units"],"food",false],
        ["Fragrance & Flavours","Delicate media","Aromatic and solvent-based media attack ordinary rubber. We supply the materials that stand up to them.",["Essential oil cooling","Solvent recovery","Temperature-sensitive processing"],["phe-gaskets","seals"],"frag",false],
@@ -2400,13 +2404,13 @@ id:{
  aboutKicker:"Kisah Kami", aboutTitle:"Berawal dari <em>genset.</em><br>Tumbuh menjadi ahli heat transfer.",
  story1:"CV. Agrindo Lestari didirikan di Medan pada tahun 2003. Di tahun-tahun awal, kami mengimpor, menyuplai, dan melayani servis generating set — untuk klien di Indonesia maupun luar negeri — sebagai distributor resmi BURG Hankering dari Eropa.",
  story2:"Saat bekerja langsung di pabrik klien, kami terus melihat masalah yang sama: heat exchanger bocor, gasket aus, dan suku cadang yang butuh berbulan-bulan untuk datang. Maka kami mulai menyelesaikannya — awalnya untuk industri non-food, lalu semakin banyak sektor.",
- story3:"Kini kami adalah mitra yang dihubungi refinery minyak sawit, pabrik kimia, produsen makanan & minuman, dan produsen fragrance saat heat exchanger mereka membutuhkan part yang tepat, dengan cepat.",
+ story3:"Kini kami adalah mitra yang dihubungi refinery minyak nabati, pabrik kimia, produsen makanan & minuman, dan produsen fragrance saat heat exchanger mereka membutuhkan part yang tepat, dengan cepat.",
  motto:"Berpikir <span>global.</span> Bertindak <span>lokal.</span>",
  mottoD:"Begitulah klien menggambarkan kami: produk dan keahlian kelas dunia dari luar negeri, diberikan dengan kecepatan dan kepedulian mitra yang selalu dekat.",
  journeyT:"Perjalanan kami — klik setiap langkah",
  journey:[["2003","Awal mula","Berdiri di Medan sebagai distributor resmi BURG Hankering — impor, suplai, dan servis generating set, di dalam maupun luar negeri.","gen"],
           ["Berikutnya","Dari genset ke proses","Menyelesaikan kebocoran dan kerusakan di lapangan membawa kami ke suku cadang plate heat exchanger, dimulai dari industri non-food.","phe"],
-          ["Berkembang","Masuk ke kelapa sawit","Menjadi pemasok andalan refinery minyak sawit dan produsen turunannya di Sumatra.","palm"],
+          ["Berkembang","Masuk ke kelapa sawit","Menjadi pemasok andalan refinery minyak nabati dan produsen turunannya di Sumatra.","palm"],
           ["Kini","Banyak industri, satu mitra","Melayani industri kelapa sawit, oleokimia, kimia, makanan & minuman, dan fragrance dengan part dari 12 negara.","globe"]],
  msKicker:"Pencapaian & Kredibilitas", msTitle:"Dua dekade <em>kepercayaan</em>, dibangun dari pabrik ke pabrik.",
  msLead:"Angka hanya menceritakan sebagian. Sisanya adalah hubungan jangka panjang yang kami bangun dengan nama-nama industri terbesar di Indonesia.",
@@ -2476,14 +2480,14 @@ zh:{
  aboutKicker:"我们的故事", aboutTitle:"始于<em>发电机组</em>，<br>成长为传热专家。",
  story1:"CV. Agrindo Lestari 于2003年在棉兰成立。创立初期，我们作为欧洲BURG Hankering的授权代理商，为印尼国内外客户进口、供应并维修发电机组。",
  story2:"在客户工厂一线工作时，我们一次又一次地看到同样的问题：换热器泄漏、垫片老化、备件要等上几个月。于是我们开始着手解决——先从非食品行业做起，再拓展到越来越多的领域。",
- story3:"如今，当棕榈油精炼厂、化工厂、食品饮料企业和香精香料生产商的换热器需要合适的备件时，他们第一个想到的就是我们。",
+ story3:"如今，当植物油精炼厂、化工厂、食品饮料企业和香精香料生产商的换热器需要合适的备件时，他们第一个想到的就是我们。",
  motto:"<span>放眼全球，</span>立足本地。",
  mottoD:"这是客户对我们的评价：来自海外的世界级产品与技术，由身边的伙伴以速度和用心交付。",
  journeyT:"我们的历程——点击每一步",
  journey:[["2003","一切的开始","在棉兰成立，成为BURG Hankering授权代理商——在国内外进口、供应并维修发电机组。","gen"],
           ["其后","从动力到工艺","在现场解决泄漏和故障的经验，让我们进入板式换热器备件领域，从非食品行业起步。","phe"],
-          ["发展","进军棕榈油行业","成为苏门答腊棕榈油精炼厂及其下游企业的首选供应商。","palm"],
-          ["如今","多个行业，一个伙伴","以来自12个国家的备件，服务棕榈油、油脂化工、化工、食品饮料及香精香料行业。","globe"]],
+          ["发展","进军植物油行业","成为苏门答腊植物油精炼厂及其下游企业的首选供应商。","palm"],
+          ["如今","多个行业，一个伙伴","以来自12个国家的备件，服务植物油、油脂化工、化工、食品饮料及香精香料行业。","globe"]],
  msKicker:"发展历程与资质", msTitle:"二十年<em>信赖</em>，一座座工厂积累而来。",
  msLead:"数字只讲述了一部分。更重要的是我们与印尼众多大型工业企业建立的长期合作关系。",
  st1:"于棉兰成立", st2:"年一线经验", st3:"个采购国家", st4:"个支持的板换品牌", st5:"个核心服务行业",
@@ -2491,7 +2495,7 @@ zh:{
  contractD:"",
  sealTxt:"",
  clientsT:"深受行业领军企业信赖", clientsHint:"将鼠标悬停或点击标志了解更多",
- c1:["棕榈油及油脂化工","精炼与下游"], c2:["农业及食品","种植与加工"], c3:["种植园及棕榈油","加工"], c4:["食品饮料","灌装生产"],
+ c1:["植物油及油脂化工","精炼与下游"], c2:["农业及食品","种植与加工"], c3:["种植园及植物油","加工"], c4:["食品饮料","灌装生产"],
  brandsT:"我们供应备件的品牌", brandsNote:"品牌名称为其各自所有者的商标，仅用于说明兼容性。",
  prodKicker:"产品", prodTitle:"<em>换热器</em>所需，一应俱全。", prodLead:"点击产品查看完整技术资料——材质、温度上限、兼容品牌及报价所需信息。",
  viewSpecs:"查看详情", coreBadge:"★ 核心产品",
@@ -2514,7 +2518,7 @@ zh:{
  srcT:"货源来自12个国家", srcD:"我们直接与欧洲和亚洲的制造商合作——让您获得正品品质，免去自行进口的繁琐。",
  r1:"可靠制造商", r2:"质量检验", r3:"进口与清关", r4:"您在印尼的工厂",
  indKicker:"行业", indTitle:"为<em>从不停歇</em>的行业而生。", indLead:"选择行业，了解我们的备件在哪里发挥作用，以及哪些产品保障其运转。",
- inds:[["棕榈油及下游","高温与油脂介质","精炼、分提和脱臭全天候高温运行。每一片垫片和板片都必须经受住高温和油脂介质的考验。",["油-油热回收","脱臭及分提冷却","导热油及蒸汽管线"],["phe-gaskets","phe-plates","graphite"],"palm",false],
+ inds:[["植物油及下游","高温与油脂介质","精炼、分提和脱臭全天候高温运行。每一片垫片和板片都必须经受住高温和油脂介质的考验。",["油-油热回收","脱臭及分提冷却","导热油及蒸汽管线"],["phe-gaskets","phe-plates","graphite"],"palm",false],
        ["化工及油脂化工","强腐蚀介质","腐蚀性化学品和高温要求精心选择合适的合金和橡胶材质。",["脂肪酸及甘油冷却","酸及溶剂工况","工艺加热与冷却"],["phe-plates","phe-gaskets","seals"],"chem",false],
        ["食品饮料","卫生第一","品质稳定，食品安全。食品级垫片和不锈钢板片，用于巴氏杀菌、冷却和CIP清洗。",["巴氏杀菌","产品冷却","CIP清洗系统"],["phe-gaskets","phe-plates","phe-units"],"food",false],
        ["香精香料","敏感介质","芳香类及溶剂型介质会侵蚀普通橡胶。我们提供能够耐受它们的材料。",["精油冷却","溶剂回收","温度敏感工艺"],["phe-gaskets","seals"],"frag",false],
@@ -2555,7 +2559,7 @@ Object.assign(T.en,{
  storyLead:"Born in Medan in 2003, we started with generating sets. Inside our clients' plants we kept seeing the same headache — leaking heat exchangers and spare parts that took months to arrive. Fixing that became our specialty.",
  timeline:[["2003","Generating sets","Import, supply and service of gensets — locally and internationally.","gen"],
            ["Next step","Into heat exchangers","Solving leaks on site led us to PHE gaskets and plates.","phe"],
-           ["Growth","Beyond non-food","From non-food industry into palm oil, chemical, food and fragrance.","globe"],
+           ["Growth","Beyond non-food","From non-food industry into vegetable oil, chemical, food and fragrance.","globe"],
            ["Today","Specialist partner","Trusted by major industrial groups and free trade zone companies.","award"]],
  whyTitle2:"Why plants choose Agrindo Lestari",
  credKicker:"Clients & Partners", credTitle:"Trusted where <em>downtime</em> is not an option.",
@@ -2589,7 +2593,7 @@ Object.assign(T.zh,{
  storyLead:"2003年诞生于棉兰，我们从发电机组起步。在客户工厂里，我们一再遇到同样的难题——换热器泄漏、备件要等上几个月。解决这些问题，成为了我们的专长。",
  timeline:[["2003","发电机组","在国内外进口、供应并维修发电机组。","gen"],
            ["其后","进入换热器领域","现场解决泄漏问题，让我们走进板换垫片和板片领域。","phe"],
-           ["发展","超越非食品行业","从非食品行业拓展至棕榈油、化工、食品及香精香料。","globe"],
+           ["发展","超越非食品行业","从非食品行业拓展至植物油、化工、食品及香精香料。","globe"],
            ["如今","专业合作伙伴","深受大型工业集团及自由贸易区企业信赖。","award"]],
  whyTitle2:"为什么工厂选择 Agrindo Lestari",
  credKicker:"客户与合作伙伴", credTitle:"在<em>停机</em>不可接受的地方，值得信赖。",
@@ -2620,7 +2624,7 @@ Object.assign(T.en,{
  navAbout:"About Us", navClients:"Clients", navProducts:"Products", navServices:"Services", navIndustries:"Industries", navContact:"Contact Us",
  heroBadge:"Medan, Indonesia · Established 2003",
  heroTitle:"Plate heat exchanger gaskets, plates & <span class='hl'>sealing solutions.</span>",
- heroText:"CV. Agrindo Lestari supplies replacement gaskets, plates and seals for all major plate heat exchanger brands, as well as complete PHE units. We serve palm oil, oleochemical, chemical, food & beverage and fragrance plants across Indonesia from our office in Medan.",
+ heroText:"CV. Agrindo Lestari supplies replacement gaskets, plates and seals for all major plate heat exchanger brands, as well as complete PHE units. We serve vegetable oil, oleochemical, chemical, food & beverage and fragrance plants across Indonesia from our office in Medan.",
  ctaQuote:"Request a Quotation", ctaProducts:"View Products",
  flowTag:"How a plate heat exchanger works",
  aboutKicker:"About Us",
@@ -2628,7 +2632,7 @@ Object.assign(T.en,{
  storyLead:"CV. Agrindo Lestari was established in Medan in 2003, supplying and servicing generating sets for industrial customers. Working on site at mills and factories, our team saw how often production stopped because a heat exchanger leaked and replacement parts were difficult to source. We began supplying those parts, and plate heat exchanger gaskets and plates are now our core business.",
  timeline:[["2003","Company founded","Established in Medan, supplying and servicing generating sets for industrial customers.","gen"],
            ["Expansion","Heat exchanger parts","Added PHE gaskets and plates to meet recurring maintenance needs at customer sites.","phe"],
-           ["Growth","New industries","Extended supply to palm oil, oleochemical, chemical, food & beverage and fragrance plants.","globe"],
+           ["Growth","New industries","Extended supply to vegetable oil, oleochemical, chemical, food & beverage and fragrance plants.","globe"],
            ["Today","Long-term supplier","Supplying established industrial groups and companies in Indonesia's free trade zones.","award"]],
  whyTitle2:"Why customers work with us",
  whys:[["Parts matched to your unit","We identify the correct gasket or plate from your PHE brand, model and serial number, or from a sample.","target"],
@@ -2636,7 +2640,7 @@ Object.assign(T.en,{
        ["Over 20 years in industry","Practical experience gained from working with industrial plants since 2003.","award"],
        ["Support after delivery","Follow-up on installation questions and planning for the next replacement.","care"]],
  credKicker:"Clients & Brands", credTitle:"Trusted by <em>established industrial groups.</em>",
- credLead:"Our customers include palm oil, agribusiness and beverage companies, as well as companies operating in Indonesia's free trade zones.",
+ credLead:"Our customers include vegetable oil, agribusiness and beverage companies, as well as companies operating in Indonesia's free trade zones.",
  ftzKick:"Free Trade Zone", ftzT:"Supplier to free trade zone companies",
  ftzD:"We have a long record of supplying companies in Indonesia's free trade zones and are familiar with their import procedures and documentation.",
  ftzP1:"Familiar with FTZ import procedures", ftzP2:"Delivery to FTZ sites", ftzP3:"",
@@ -2664,7 +2668,7 @@ Object.assign(T.en,{
  srcT:"Global sourcing network", srcD:"Parts are sourced directly from manufacturers in 12 countries across Europe and Asia and delivered to customers from our base in Medan.",
  indKicker:"Industries", indTitle:"Industries <em>we serve.</em>",
  indLead:"Our products are used in continuous-process plants, where heat exchanger reliability directly affects production.",
- inds:[["Palm Oil Refining","Refining & fractionation","Refining, fractionation and deodorisation run continuously at high temperatures with fatty media. Gaskets and plates must withstand both.",["Oil-to-oil heat recovery","Deodoriser and fractionation cooling","Thermal oil and steam lines"],["phe-gaskets","phe-plates","graphite"],"palm",false,"Customers include Musim Mas, Sinar Mas and Gama Group.","NBR / HNBR gaskets · AISI 316L plates · graphite for steam and thermal oil"],
+ inds:[["Vegetable Oil Refining","Refining & fractionation","Refining, fractionation and deodorisation run continuously at high temperatures with fatty media. Gaskets and plates must withstand both.",["Oil-to-oil heat recovery","Deodoriser and fractionation cooling","Thermal oil and steam lines"],["phe-gaskets","phe-plates","graphite"],"palm",false,"Customers include Musim Mas, Sinar Mas and Gama Group.","NBR / HNBR gaskets · AISI 316L plates · graphite for steam and thermal oil"],
        ["Chemical & Oleochemical","Aggressive media","Corrosive media and high temperatures require the correct plate alloy and elastomer for each duty.",["Fatty acid and glycerine cooling","Acid and solvent duties","Process heating and cooling"],["phe-plates","phe-gaskets","seals"],"chem",false,"","FKM / EPDM gaskets · titanium, SMO 254 and Hastelloy C-276 plates"],
        ["Food & Beverage","Hygienic processing","Pasteurising, chilling and CIP cleaning require consistent quality and suitable gasket materials.",["Pasteurisation","Product chilling","CIP cleaning systems"],["phe-gaskets","phe-plates","phe-units"],"food",false,"Customers include Coca-Cola bottling operations.","EPDM / NBR gaskets · AISI 316L plates"],
        ["Fragrance & Flavours","Solvent-based media","Aromatic and solvent-based media degrade standard rubber, so resistant materials are essential.",["Essential oil cooling","Solvent recovery","Temperature-sensitive processing"],["phe-gaskets","seals"],"frag",false,"","FKM gaskets · mechanical seals"],
@@ -2676,7 +2680,7 @@ Object.assign(T.en,{
        ["What information do you need for a quotation?","The PHE brand, model and serial number, the part and quantity required, and your process conditions (medium and temperature). Photos or drawings help us confirm the part faster."],
        ["Do you keep items in stock?","Selected fast-moving gaskets and seals are kept in stock. For other items, the lead time is stated in our quotation."],
        ["Can you help us choose the right material?","Yes. Based on your medium, temperature, pressure and cleaning process, we recommend a suitable material before you place an order."],
-       ["Who are your customers?","Palm oil refineries, plantation groups, chemical plants, food & beverage and fragrance producers, contractors and maintenance teams, including companies in free trade zones."]],
+       ["Who are your customers?","Vegetable oil refineries, plantation groups, chemical plants, food & beverage and fragrance producers, contractors and maintenance teams, including companies in free trade zones."]],
  contactTitle:"Request a quotation or technical advice.",
  contactLead:"Send us your PHE model, part number or drawing and our team will respond with a suitable solution and quotation.",
  fTitle:"Request a quotation", fSub:"Complete the form and send it to us via WhatsApp or email.",
@@ -2756,7 +2760,7 @@ Object.assign(T.zh,{
  navAbout:"关于我们", navClients:"客户", navProducts:"产品", navServices:"服务", navIndustries:"行业", navContact:"联系我们",
  heroBadge:"印度尼西亚棉兰 · 成立于2003年",
  heroTitle:"板式换热器垫片、板片与<span class='hl'>密封解决方案。</span>",
- heroText:"CV. Agrindo Lestari 为各主要品牌的板式换热器提供替换垫片、板片和密封件，并供应整台板式换热器。我们从棉兰办公室出发，服务印尼各地的棕榈油、油脂化工、化工、食品饮料及香料工厂。",
+ heroText:"CV. Agrindo Lestari 为各主要品牌的板式换热器提供替换垫片、板片和密封件，并供应整台板式换热器。我们从棉兰办公室出发，服务印尼各地的植物油、油脂化工、化工、食品饮料及香料工厂。",
  ctaQuote:"索取报价", ctaProducts:"查看产品",
  flowTag:"板式换热器工作原理",
  aboutKicker:"关于我们",
@@ -2764,7 +2768,7 @@ Object.assign(T.zh,{
  storyLead:"CV. Agrindo Lestari 于2003年在棉兰成立，最初为工业客户供应和维修发电机组。在工厂现场工作时，我们的团队发现生产常因换热器泄漏和备件难以采购而中断。我们由此开始供应这些备件，如今板式换热器垫片和板片已成为我们的核心业务。",
  timeline:[["2003","公司成立","在棉兰成立，为工业客户供应和维修发电机组。","gen"],
            ["拓展","换热器备件","增加板换垫片和板片业务，满足客户现场的日常维护需求。","phe"],
-           ["发展","新行业","业务扩展至棕榈油、油脂化工、化工、食品饮料和香料工厂。","globe"],
+           ["发展","新行业","业务扩展至植物油、油脂化工、化工、食品饮料和香料工厂。","globe"],
            ["如今","长期供应商","为知名工业集团及印尼自由贸易区企业供货。","award"]],
  whyTitle2:"客户选择我们的理由",
  whys:[["与您的设备精确匹配","根据板换品牌、型号和序列号或样品，确定正确的垫片或板片。","target"],
@@ -2772,7 +2776,7 @@ Object.assign(T.zh,{
        ["二十余年行业经验","自2003年起与工业工厂合作积累的实践经验。","award"],
        ["交付后支持","跟进安装问题，并协助规划下一次更换。","care"]],
  credKicker:"客户与品牌", credTitle:"深受<em>知名工业集团</em>信赖。",
- credLead:"我们的客户包括棕榈油、农业和饮料企业，以及在印尼自由贸易区运营的公司。",
+ credLead:"我们的客户包括植物油、农业和饮料企业，以及在印尼自由贸易区运营的公司。",
  ftzKick:"自由贸易区", ftzT:"自由贸易区企业供应商",
  ftzD:"我们长期为印尼自由贸易区企业供货，熟悉其进口程序和单据要求。",
  ftzP1:"熟悉自贸区进口程序", ftzP2:"送货至自贸区现场", ftzP3:"",
@@ -2800,7 +2804,7 @@ Object.assign(T.zh,{
  srcT:"全球采购网络", srcD:"备件直接从欧洲和亚洲12个国家的制造商采购，并由棉兰基地送达客户。",
  indKicker:"行业", indTitle:"我们<em>服务的行业。</em>",
  indLead:"我们的产品用于连续生产的工厂，换热器的可靠性直接影响生产。",
- inds:[["棕榈油精炼","精炼与分提","精炼、分提和脱臭在高温和油脂介质下连续运行，垫片和板片必须同时耐受两者。",["油-油热回收","脱臭及分提冷却","导热油和蒸汽管线"],["phe-gaskets","phe-plates","graphite"],"palm",false,"客户包括 Musim Mas、Sinar Mas 和 Gama Group。","NBR / HNBR 垫片 · AISI 316L 板片 · 蒸汽及导热油用石墨"],
+ inds:[["植物油精炼","精炼与分提","精炼、分提和脱臭在高温和油脂介质下连续运行，垫片和板片必须同时耐受两者。",["油-油热回收","脱臭及分提冷却","导热油和蒸汽管线"],["phe-gaskets","phe-plates","graphite"],"palm",false,"客户包括 Musim Mas、Sinar Mas 和 Gama Group。","NBR / HNBR 垫片 · AISI 316L 板片 · 蒸汽及导热油用石墨"],
        ["化工与油脂化工","腐蚀性介质","腐蚀性介质和高温要求每个工况选择正确的板片合金和橡胶材质。",["脂肪酸和甘油冷却","酸和溶剂工况","工艺加热与冷却"],["phe-plates","phe-gaskets","seals"],"chem",false,"","FKM / EPDM 垫片 · 钛、SMO 254 和哈氏合金 C-276 板片"],
        ["食品饮料","卫生级工艺","巴氏杀菌、冷却和CIP清洗需要稳定的质量和合适的垫片材质。",["巴氏杀菌","产品冷却","CIP清洗系统"],["phe-gaskets","phe-plates","phe-units"],"food",false,"客户包括可口可乐灌装业务。","EPDM / NBR 垫片 · AISI 316L 板片"],
        ["香料与香精","溶剂型介质","芳香类和溶剂型介质会损坏普通橡胶，因此需要耐受材质。",["精油冷却","溶剂回收","温度敏感工艺"],["phe-gaskets","seals"],"frag",false,"","FKM 垫片 · 机械密封"],
@@ -2812,7 +2816,7 @@ Object.assign(T.zh,{
        ["报价需要哪些信息？","板换品牌、型号和序列号，所需备件及数量，以及工况（介质和温度）。照片或图纸有助于更快确认。"],
        ["有库存吗？","部分常用垫片和密封件备有库存。其他物品的交货期在报价中注明。"],
        ["能帮助选择材质吗？","可以。我们会根据介质、温度、压力和清洗工艺，在您下单前推荐合适的材质。"],
-       ["你们的客户有哪些？","棕榈油精炼厂、种植集团、化工厂、食品饮料和香料生产商、承包商及维护团队，包括自由贸易区企业。"]],
+       ["你们的客户有哪些？","植物油精炼厂、种植集团、化工厂、食品饮料和香料生产商、承包商及维护团队，包括自由贸易区企业。"]],
  contactTitle:"索取报价或技术咨询。",
  contactLead:"请发送您的板换型号、零件号或图纸，我们的团队将提供合适的方案和报价。",
  fTitle:"索取报价", fSub:"填写表格，通过 WhatsApp 或电子邮件发送给我们。",
@@ -3334,7 +3338,7 @@ Object.assign(T.en,{
  pKicker:"Customers & Brands", pTitle:"Supplying leading producers. <em>Supporting leading brands.</em>",
  brandsNote:"Customer and brand logos are trademarks of their respective owners. Equipment brands are shown to indicate parts compatibility only.",
  aboutKicker:"Company",
- storyLead2:"Today we supply palm oil refineries, oleochemical and chemical plants, food & beverage and fragrance producers, and companies in Indonesia's free trade zones, working with manufacturers in 12 countries.",
+ storyLead2:"Today we supply vegetable oil refineries, oleochemical and chemical plants, food & beverage and fragrance producers, and companies in Indonesia's free trade zones, working with manufacturers in 12 countries.",
  svcKicker:"Services",
  srcT:"Global sourcing, local delivery", srcD:"We source directly from manufacturers in Europe and Asia, handle the import process, and deliver from Medan to your site.",
  srcSteps:["Manufacturer","Import & customs","Medan","Your site"], regions:{eu:"Europe",as:"Asia"},
@@ -3388,7 +3392,7 @@ Object.assign(T.zh,{
  pKicker:"客户与品牌", pTitle:"服务领先生产企业，<em>支持主流设备品牌。</em>",
  brandsNote:"客户及品牌标志归其各自所有者所有。设备品牌仅用于说明备件兼容性。",
  aboutKicker:"公司",
- storyLead2:"如今，我们为棕榈油精炼厂、油脂化工和化工厂、食品饮料及香料生产商，以及印尼自由贸易区企业供货，并与12个国家的制造商合作。",
+ storyLead2:"如今，我们为植物油精炼厂、油脂化工和化工厂、食品饮料及香料生产商，以及印尼自由贸易区企业供货，并与12个国家的制造商合作。",
  svcKicker:"服务",
  srcT:"全球采购，本地交付", srcD:"我们直接从欧洲和亚洲制造商采购，办理进口手续，并从棉兰送货到您的工厂。",
  srcSteps:["制造商","进口与清关","棉兰","您的工厂"], regions:{eu:"欧洲",as:"亚洲"},
@@ -3481,7 +3485,7 @@ Object.assign(T.en,{
  pLabel:"Customers we supply and equipment brands we support",
  aboutKicker:"About us", aboutTitle:"A specialist supplier to <em>Indonesian industry.</em>",
  storyLead:"CV. Agrindo Lestari began in Medan as a supplier of generating sets. Working inside our customers' plants, we saw how often production stopped because a heat exchanger leaked and replacement parts were hard to obtain. We built our business around solving that problem.",
- storyLead2:"Today, plate heat exchanger gaskets, plates and complete units are our core business. We serve palm oil, oleochemical, chemical, food & beverage and fragrance producers, including companies operating in free trade zones.",
+ storyLead2:"Today, plate heat exchanger gaskets, plates and complete units are our core business. We serve vegetable oil, oleochemical, chemical, food & beverage and fragrance producers, including companies operating in free trade zones.",
  stats:[["2003","Founded"],["12","Sourcing countries"],["5","Core industries"]],
  prodLead:"Select a product for specifications, available materials and the details we need for a quotation.",
  svcLead:"From identifying the right part to planning the next replacement.",
@@ -3519,7 +3523,7 @@ Object.assign(T.zh,{
  pLabel:"我们服务的客户与支持的设备品牌",
  aboutKicker:"关于我们", aboutTitle:"服务<em>印尼工业</em>的专业供应商。",
  storyLead:"CV. Agrindo Lestari 起步于棉兰，最初供应发电机组。在客户工厂工作时，我们发现生产常因换热器泄漏和备件难以获得而中断，于是围绕解决这一问题发展业务。",
- storyLead2:"如今，板式换热器垫片、板片和整机是我们的核心业务。我们服务棕榈油、油脂化工、化工、食品饮料和香料生产商，包括自由贸易区企业。",
+ storyLead2:"如今，板式换热器垫片、板片和整机是我们的核心业务。我们服务植物油、油脂化工、化工、食品饮料和香料生产商，包括自由贸易区企业。",
  stats:[["2003","成立"],["12","采购国家"],["5","核心行业"]],
  prodLead:"选择产品查看规格、可选材质以及报价所需信息。",
  svcLead:"从确认正确备件到规划下一次更换。",
@@ -3597,7 +3601,7 @@ Object.assign(T.en,{
  navHome:"Home",
  heroEyebrow:"Plate heat exchanger spare parts specialist",
  heroTitle:"Gaskets and plates for <span class='hl'>all major heat exchanger brands.</span>",
- heroText:"Replacement parts and complete plate heat exchangers for palm oil, chemical, food and fragrance plants. Stock held in Asia and Europe, supplied across Indonesia.",
+ heroText:"Replacement parts and complete plate heat exchangers for vegetable oil, chemical, food and fragrance plants. Stock held in Asia and Europe, supplied across Indonesia.",
  ctaQuote:"Request a quotation", ctaProducts:"View products",
  h3dHint:"Drag to rotate. Select a label to see the part.", h3dOpen:"Open the unit", h3dClose:"Close the unit",
  hsGasket:"Gaskets", hsPlate:"Plates", hsFrame:"Frame & tightening bolts",
@@ -3621,7 +3625,7 @@ Object.assign(T.en,{
  critKicker:"What we stand for", critTitle:"Three commitments to <em>every customer.</em>",
  crit:[["Strategic stock, competitive prices","Stock held in Asia and Europe lets us respond quickly on delivery and keep prices competitive."],["Quality and performance","Gaskets produced to strict standards, with material traceability, dimensional checks before shipment and FDA-compliant options."],["Expertise and support","We advise on material, model and configuration, so you receive the solution that suits your process."]],
  factsT:"Company facts",
- facts:[["Legal name","CV. Agrindo Lestari"],["Founded","2003"],["Head office","Medan, North Sumatra"],["Core business","Plate heat exchanger gaskets, plates and units"],["Customers","Palm oil, oleochemical, chemical, food & beverage and fragrance producers, including free trade zone companies"]],
+ facts:[["Legal name","CV. Agrindo Lestari"],["Founded","2003"],["Head office","Medan, North Sumatra"],["Core business","Plate heat exchanger gaskets, plates and units"],["Customers","Vegetable oil, oleochemical, chemical, food & beverage and fragrance producers, including free trade zone companies"]],
  matsKicker:"Available materials", matsTitle:"Plates and gaskets in the <em>right material.</em>",
  matsPlates:"Plate materials", matsGaskets:"Gasket elastomers",
  plates:[["AISI 304","General water and utility duties"],["AISI 316L","Food, oils and mild chemicals"],["SMO 254","Higher chloride content"],["Titanium","Seawater and chlorides"],["Nickel 200/201","Hot caustic solutions"],["Hastelloy C-276","Strong acids and aggressive media"]],
@@ -3689,7 +3693,7 @@ Object.assign(T.zh,{
  navHome:"首页",
  heroEyebrow:"板式换热器备件专家",
  heroTitle:"适用于<span class='hl'>各主要品牌换热器</span>的垫片与板片。",
- heroText:"为棕榈油、化工、食品和香料工厂提供替换备件及板式换热器整机。库存位于亚洲和欧洲，供货覆盖印尼全境。",
+ heroText:"为植物油、化工、食品和香料工厂提供替换备件及板式换热器整机。库存位于亚洲和欧洲，供货覆盖印尼全境。",
  ctaQuote:"索取报价", ctaProducts:"查看产品",
  h3dHint:"拖动旋转，点击标签查看部件。", h3dOpen:"展开机组", h3dClose:"合拢机组",
  hsGasket:"垫片", hsPlate:"板片", hsFrame:"框架与夹紧螺栓",
@@ -3713,7 +3717,7 @@ Object.assign(T.zh,{
  critKicker:"我们的承诺", critTitle:"对<em>每位客户</em>的三项承诺。",
  crit:[["战略库存，价格有竞争力","亚洲和欧洲的库存使我们能够快速响应交货，并保持有竞争力的价格。"],["质量与性能","垫片按严格标准生产，材料可追溯，发货前检查尺寸，并提供符合 FDA 的选项。"],["专业与支持","我们就材质、型号和配置提供建议，为您的工艺提供合适的方案。"]],
  factsT:"公司信息",
- facts:[["公司名称","CV. Agrindo Lestari"],["成立","2003 年"],["总部","北苏门答腊省棉兰"],["核心业务","板式换热器垫片、板片和整机"],["客户","棕榈油、油脂化工、化工、食品饮料和香料生产商，包括自由贸易区企业"]],
+ facts:[["公司名称","CV. Agrindo Lestari"],["成立","2003 年"],["总部","北苏门答腊省棉兰"],["核心业务","板式换热器垫片、板片和整机"],["客户","植物油、油脂化工、化工、食品饮料和香料生产商，包括自由贸易区企业"]],
  matsKicker:"可选材质", matsTitle:"选择<em>合适材质</em>的板片与垫片。",
  matsPlates:"板片材质", matsGaskets:"垫片橡胶材质",
  plates:[["AISI 304","一般水和公用工程"],["AISI 316L","食品、油脂和弱化学品"],["SMO 254","较高氯离子含量"],["钛","海水和氯化物"],["镍 200/201","热碱液"],["哈氏合金 C-276","强酸和腐蚀性介质"]],
@@ -3896,7 +3900,7 @@ const WHY_ICON = [
   '<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>'];
 Object.assign(T.en,{
  custKicker:"Customers", custTitle:"Supplying leading producers <em>in Indonesia.</em>",
- custs:["Palm oil & oleochemicals","Agribusiness & consumer goods","Beverages"],
+ custs:["Vegetable oil & oleochemicals","Agribusiness & consumer goods","Beverages"],
  oemKicker:"OEM brands", oemTitle:"Replacement parts for <em>leading OEM brands.</em>",
  oemLead:"Gaskets and plates matched to the original specification of your plate heat exchanger.",
  whyKicker:"Why choose Agrindo", whyTitle:"A reliable partner for <em>your heat exchangers.</em>",
@@ -3924,7 +3928,7 @@ Object.assign(T.id,{
 });
 Object.assign(T.zh,{
  custKicker:"客户", custTitle:"为<em>印尼领先生产商</em>供货。",
- custs:["棕榈油与油脂化工","农业综合与消费品","饮料"],
+ custs:["植物油与油脂化工","农业综合与消费品","饮料"],
  oemKicker:"OEM 品牌", oemTitle:"<em>主要 OEM 品牌</em>的替换备件。",
  oemLead:"垫片和板片与您板式换热器的原厂规格相匹配。",
  whyKicker:"为什么选择 Agrindo", whyTitle:"<em>您的换热器</em>值得信赖的合作伙伴。",
@@ -3976,7 +3980,7 @@ const TRUST14 = [["Musim Mas","images/cust/musim-mas.png"],["Sinar Mas","images/
   ["Coca-Cola","images/cust/coca-cola.png"],["Gama Group",""],["Sinarlaut Group",""]];
 WHY_ICON[5] = '<circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>';
 Object.assign(T.en,{
- heroText:"Supplying palm oil, chemical, food and fragrance plants across Indonesia with replacement parts and complete plate heat exchangers.",
+ heroText:"Supplying vegetable oil, chemical, food and fragrance plants across Indonesia with replacement parts and complete plate heat exchangers.",
  trustT:"Trusted by leading producers in Indonesia",
  why:[["Strategic stock, competitive prices","Stock held in Asia and Europe lets us respond quickly and keep prices competitive."],
       ["Precise fit","Gaskets engineered to fit your plates exactly, for a secure seal and easy installation."],
@@ -4004,7 +4008,7 @@ Object.assign(T.id,{
  facts:[["Nama resmi","CV. Agrindo Lestari"],["Berdiri","2003"],["Kantor pusat","Medan, Sumatera Utara"],["Spesialisasi","Suku cadang plate heat exchanger"]]
 });
 Object.assign(T.zh,{
- heroText:"为印尼各地的棕榈油、化工、食品和香料工厂供应替换备件及板式换热器整机。",
+ heroText:"为印尼各地的植物油、化工、食品和香料工厂供应替换备件及板式换热器整机。",
  trustT:"印尼领先生产商的信赖之选",
  why:[["战略库存，价格有竞争力","亚洲和欧洲的库存使我们能够快速响应，并保持有竞争力的价格。"],
       ["精确匹配","垫片按您的板片精确设计，密封可靠，安装方便。"],
@@ -4046,7 +4050,7 @@ Object.assign(T.zh,{open3d:"打开板片组", close3d:"合上板片组", hint3d:
 const _render15 = render;
 render = function(){ _render15(); if (window.__hero3dLbl) window.__hero3dLbl(); };
 Object.assign(T.en,{trustKicker:"Our customers", trustTitle:"Trusted by leading producers <em>in Indonesia.</em>",
- trustLead:"Palm oil, agribusiness and beverage producers rely on Agrindo to keep their plate heat exchangers running.",
+ trustLead:"Vegetable oil, agribusiness and beverage producers rely on Agrindo to keep their plate heat exchangers running.",
  oemParts:"Plates and gaskets", oemAsk:"Request parts",
  oemMissing:"Brand not listed? Send us the details on your unit's nameplate and we will check it for you."});
 Object.assign(T.id,{trustKicker:"Pelanggan kami", trustTitle:"Dipercaya produsen terkemuka <em>di Indonesia.</em>",
@@ -4054,7 +4058,7 @@ Object.assign(T.id,{trustKicker:"Pelanggan kami", trustTitle:"Dipercaya produsen
  oemParts:"Plate dan gasket", oemAsk:"Minta penawaran",
  oemMissing:"Merek Anda tidak ada di daftar? Kirimkan data pada nameplate unit Anda dan kami akan memeriksanya."});
 Object.assign(T.zh,{trustKicker:"我们的客户", trustTitle:"深受<em>印尼领先生产商</em>信赖。",
- trustLead:"棕榈油、农业综合和饮料生产商依靠 Agrindo 保障其板式换热器的稳定运行。",
+ trustLead:"植物油、农业综合和饮料生产商依靠 Agrindo 保障其板式换热器的稳定运行。",
  oemParts:"板片和垫片", oemAsk:"询价",
  oemMissing:"没有找到您的品牌？请发送设备铭牌信息，我们将为您核实。"});
 function askBrand15(b){ const m = document.getElementById("f-model"); if (m){ m.value = b + " "; } location.hash = "#contact"; setTimeout(() => { const el = document.getElementById("f-model"); if (el) el.focus({preventScroll:true}); }, 400); return false; }
@@ -4085,9 +4089,9 @@ function elast16(m){
   box.querySelector(".el16-out").innerHTML = `<b>${e.t}</b><span>${t.el16Media}: ${e[lang]}</span>`;
 }
 const APPS16 = {
-  en:["Palm oil refineries","Oleochemical plants","Chemical industry","Food & beverage","Power plants","Marine vessels"],
-  id:["Refinery minyak sawit","Pabrik oleokimia","Industri kimia","Makanan & minuman","Pembangkit listrik","Kapal laut"],
-  zh:["棕榈油精炼厂","油脂化工厂","化工行业","食品饮料","发电厂","船舶"]};
+  en:["Vegetable oil refineries","Oleochemical plants","Chemical industry","Food & beverage","Power plants","Marine vessels"],
+  id:["Refinery minyak nabati","Pabrik oleokimia","Industri kimia","Makanan & minuman","Pembangkit listrik","Kapal laut"],
+  zh:["植物油精炼厂","油脂化工厂","化工行业","食品饮料","发电厂","船舶"]};
 const NEED16 = {
   "phe-gaskets":{en:["PHE brand and model","Serial number or a photo of the nameplate","Quantity","Gasket material, if known"],
                  id:["Merek dan model PHE","Nomor seri atau foto nameplate","Jumlah","Material gasket, jika diketahui"],
@@ -4122,9 +4126,9 @@ const NEED16 = {
     pl.apps = APPS16;
   }
   if (u){
-    u.apps = {en:["Palm oil & fats processing","Chemical industry","Food & beverage","General industry"],
-              id:["Pengolahan minyak sawit & lemak","Industri kimia","Makanan & minuman","Industri umum"],
-              zh:["棕榈油及油脂加工","化工行业","食品饮料","通用工业"]};
+    u.apps = {en:["Vegetable oil & fats processing","Chemical industry","Food & beverage","General industry"],
+              id:["Pengolahan minyak nabati & lemak","Industri kimia","Makanan & minuman","Industri umum"],
+              zh:["植物油及油脂加工","化工行业","食品饮料","通用工业"]};
   }
   if (!P("spiral-hx")) PRODUCTS.push({ id:"spiral-hx", cat:"phe", pic:"unit",
     name:{en:"Spiral Heat Exchangers", id:"Spiral Heat Exchanger", zh:"螺旋板式换热器"},
@@ -4146,9 +4150,9 @@ const NEED16 = {
            ["Sizing","Designed to your process data","Penentuan ukuran","选型"]],
     supply:[["Support","Selection and after-sales from our team","Dukungan","技术支持"],
             ["Maintenance","Cover gaskets and service parts on request","Perawatan","维护"]],
-    apps:{en:["Palm oil & oleochemicals","Chemical industry","Food & beverage"],
+    apps:{en:["Vegetable oil & oleochemicals","Chemical industry","Food & beverage"],
           id:["Kelapa sawit & oleokimia","Industri kimia","Makanan & minuman"],
-          zh:["棕榈油及油脂化工","化工行业","食品饮料"]}});
+          zh:["植物油及油脂化工","化工行业","食品饮料"]}});
   // order: gaskets, plates, units, spiral, graphite last
   const ORDER = ["phe-gaskets","phe-plates","phe-units","spiral-hx","graphite"];
   PRODUCTS.sort((a,b) => (ORDER.indexOf(a.id)+99*(ORDER.indexOf(a.id)<0)) - (ORDER.indexOf(b.id)+99*(ORDER.indexOf(b.id)<0)));
@@ -4313,7 +4317,7 @@ Object.assign(T.zh,{open3d:"拆开设备", close3d:"重新装配"});
 // ---------- SEO wording: use the terms buyers search for ----------
 Object.assign(T.en,{
   heroTitle:"Gaskets and plates for <span class='hl'>plate heat exchangers.</span>",
-  heroText:"Replacement PHE gaskets and plates, complete plate heat exchangers and spiral heat exchangers for palm oil, chemical, food, power and marine industries across Indonesia.",
+  heroText:"Replacement PHE gaskets and plates, complete plate heat exchangers and spiral heat exchangers for vegetable oil, chemical, food, power and marine industries across Indonesia.",
   whyTitle:"A reliable partner for <em>plate heat exchanger maintenance.</em>",
   oemTitle:"Gaskets and plates for <em>leading PHE brands.</em>",
   oemLead:"Gaskets and plates matched to the original specification of your plate heat exchanger.",
@@ -4327,7 +4331,7 @@ Object.assign(T.id,{
   contactLead:"Beritahu kami merek, model atau nomor seri plate heat exchanger Anda dan suku cadang yang dibutuhkan. Kami akan membalas dengan penawaran."});
 Object.assign(T.zh,{
   heroTitle:"<span class='hl'>板式换热器</span>垫片与板片。",
-  heroText:"为印尼各地的棕榈油、化工、食品、电力和船舶行业提供板式换热器替换垫片和板片、整机及螺旋板式换热器。",
+  heroText:"为印尼各地的植物油、化工、食品、电力和船舶行业提供板式换热器替换垫片和板片、整机及螺旋板式换热器。",
   whyTitle:"<em>板式换热器维护</em>值得信赖的合作伙伴。",
   oemTitle:"<em>主要板式换热器品牌</em>的垫片与板片。",
   oemLead:"垫片和板片均按您的板式换热器原厂规格匹配。",
@@ -4338,7 +4342,7 @@ const SEO19 = {
       about:["About Agrindo Lestari | Plate Heat Exchanger Parts Supplier, Medan","Agrindo Lestari is a Medan-based specialist supplier of plate heat exchanger gaskets, plates and units to industry across Indonesia since 2003."],
       products:["Plate Heat Exchanger Parts & Units | Agrindo Lestari","PHE gaskets in NBR, EPDM, HNBR and Viton, PHE plates in stainless steel and titanium, PHE units, spiral heat exchangers and graphite materials."],
       services:["PHE Parts Supply & Technical Support | Agrindo Lestari","Part identification from the nameplate, material selection and supply of plate heat exchanger gaskets and plates across Indonesia."],
-      industries:["Industries | Palm Oil, Chemical, Food, Power, Marine | Agrindo Lestari","Plate heat exchanger gaskets and plates for palm oil refineries, chemical and oleochemical plants, food and beverage, power plants and marine vessels."],
+      industries:["Industries | Vegetable Oil, Chemical, Food, Power, Marine | Agrindo Lestari","Plate heat exchanger gaskets and plates for vegetable oil refineries, chemical and oleochemical plants, food and beverage, power plants and marine vessels."],
       faq:["PHE Gasket & Plate FAQ | Agrindo Lestari","Answers on plate heat exchanger gasket materials, compatible brands, ordering by serial number and delivery across Indonesia."],
       contact:["Request a Quotation | Agrindo Lestari, Medan","Send your plate heat exchanger brand, model or serial number for a quotation on gaskets, plates or units. Office: +62 61 733 2031."]},
   id:{home:["Gasket & Plate PHE untuk Semua Merek | Agrindo Lestari","Jual gasket dan plate PHE untuk Alfa Laval, Kelvion, GEA, APV dan merek lain, serta unit PHE, spiral heat exchanger dan grafit. Agrindo Lestari, Medan."],
@@ -4404,7 +4408,7 @@ const _render19b = render; render = function(){ _render19b(); seo19(); };
 Object.assign(SEO19.zh,{about:["关于 Agrindo Lestari | 板式换热器备件供应商","Agrindo Lestari 自 2003 年起在棉兰为印尼工业客户供应板式换热器垫片、板片和整机。"],
   products:["板式换热器备件与整机 | Agrindo Lestari","NBR、EPDM、HNBR、Viton 垫片，不锈钢和钛板片，板式换热器整机，螺旋板式换热器及石墨材料。"],
   services:["板式换热器备件供应与技术支持 | Agrindo Lestari","根据铭牌识别备件、选择材质，并向印尼各地供应板式换热器垫片和板片。"],
-  industries:["服务行业 | Agrindo Lestari","为棕榈油精炼、化工与油脂化工、食品饮料、发电厂和船舶提供板式换热器垫片和板片。"],
+  industries:["服务行业 | Agrindo Lestari","为植物油精炼、化工与油脂化工、食品饮料、发电厂和船舶提供板式换热器垫片和板片。"],
   faq:["常见问题 | Agrindo Lestari","关于垫片材质、兼容品牌、按序列号订购及交货的解答。"],
   contact:["询价 | Agrindo Lestari","发送板式换热器品牌、型号或序列号，获取垫片、板片或整机报价。办公电话：+62 61 733 2031。"]});
 ["phe-gaskets","phe-plates","phe-units","spiral-hx","graphite"].forEach(id => { const p = PRODUCTS.find(x => x.id === id); if (p && SEOP19[id]) SEOP19[id].zh = [p.name.zh + " | Agrindo Lestari", SEO19.zh.products[1]]; });
@@ -4637,7 +4641,7 @@ const FG32 = {en:"Food-grade (FDA-compliant) NBR and EPDM available for food, be
   const APPS32 = {en:["Fats and oils","Oleochemical plants","Chemical industry","Food & beverage","Dairy & milk processing","Power plants","Marine vessels"],
                   id:["Minyak dan lemak","Pabrik oleokimia","Industri kimia","Makanan & minuman","Pengolahan susu","Pembangkit listrik","Kapal laut"],
                   zh:["油脂加工","油脂化工厂","化工行业","食品饮料","乳品加工","发电厂","船舶"]};
-  PRODUCTS.forEach(p => { if (p.apps && p.apps.en && p.apps.en[0] === "Palm oil refineries") p.apps = JSON.parse(JSON.stringify(APPS32)); });
+  PRODUCTS.forEach(p => { if (p.apps && p.apps.en && p.apps.en[0] === "Vegetable oil refineries") p.apps = JSON.parse(JSON.stringify(APPS32)); });
   if (typeof PS19 !== "undefined" && PS19["phe-gaskets"]) PS19["phe-gaskets"] = {en:"NBR to Viton, clip-on or glued", id:"NBR hingga Viton, clip-on atau lem", zh:"NBR 至氟橡胶，卡扣式或粘接式"};
   // services: no claim of in-house production
   const SV = {en:["Custom-made gaskets","Made to match your plate model in NBR, NBR P, HTNBR, HNBR, EPDM or Viton A / G, including food-grade (FDA-compliant) grades."],
