@@ -1931,6 +1931,7 @@ html{-webkit-tap-highlight-color:transparent}
 @media (max-width:360px){.eyebrow[data-i18n="heroEyebrow"]{font-size:.62rem}}
 .li33{display:inline-flex;align-items:center;gap:9px;color:inherit;text-decoration:none}.li33:hover span{text-decoration:underline}.li33 svg{flex:0 0 18px;color:#e6ece8}
 .also34{font-size:.9rem;margin-top:8px!important;opacity:.9}.also34 b{color:#f5c400}
+.ind35-g{display:block!important}.ind35-g+.ind35-g{margin-top:9px}.ind35-g em{display:block;font-style:normal;font-size:.74rem;font-weight:700;color:#4a554e;margin-bottom:5px}.ind35-g>div{display:flex;flex-wrap:wrap;gap:5px}.ind35-l{margin-top:auto;display:flex;flex-direction:column;gap:6px}
 </style>
 <script>if(location.hostname==="agrindolestari.github.io"){var s=document.createElement("script");s.async=1;s.src="https://www.googletagmanager.com/gtag/js?id=G-1BFHBXH0L4";document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag("js",new Date());gtag("config","G-1BFHBXH0L4");addEventListener("hashchange",function(){gtag("event","page_view",{page_location:location.href,page_title:document.title});});}</script>
 <meta name="google-site-verification" content="M20Ci52eR5CdUbxVOi6yWMHlW7NEDv_aOt4JY5xxwos">
@@ -4789,6 +4790,22 @@ finder = function(){
   $("#result").innerHTML = `<small>${t.fdRec}</small>${head}<div class="res-bars">${bars}</div>
     <a href="#contact" class="btn btn-y" onclick="prefill('${best||''}')">${t.fdTalk} <span class="arrow">→</span></a><p class="disc">${t.fdDisc}</p>`;
 };
+// ---------- round 35: Chemical & Oleochemical shows its two guide groups separately, each with its own link ----------
+(function(){
+  const CH = [["chem",["EPDM","Viton A","Viton G"]],["glyc",["HNBR","Viton A","Viton G"]]];
+  const _r = render; render = function(){ _r();
+    const art = document.querySelectorAll("#indGrid .ind12-m")[1]; if (!art) return;
+    const t = L(), name = k => ((t.media || []).find(x => x[0] === k) || [])[2] || k;
+    const gb = art.querySelector(".ind32-b"); if (!gb) return;
+    gb.innerHTML = `<small>${t.indG}</small>` + CH.map(([k, ms]) => `<div class="ind35-g"><em>${name(k)}</em><div>${ms.map(m => `<span>${m}</span>`).join("")}</div></div>`).join("");
+    const card = art.closest("article"), cta = card && card.querySelector(".ind12-cta");
+    if (cta && !card.querySelector(".ind35-l")) {
+      const w = document.createElement("div"); w.className = "ind35-l";
+      w.innerHTML = CH.map(([k]) => `<a class="ind12-cta" href="#products" onclick="setMedia12('${k}')">${name(k)} →</a>`).join("");
+      cta.replaceWith(w);
+    }
+  };
+})();
 
 $("#yr").textContent = new Date().getFullYear();
 $$(".lang button").forEach(b => b.onclick = () => { lang = b.dataset.lang; try { localStorage.setItem("agl-lang", lang); } catch(e) {} render(); });
@@ -5406,6 +5423,7 @@ html,body{background-color:#141d18}
 .pk32-o.on{background:#132a1d}
 .it32-r{background:#101914}
 .it32-r>b{color:#eef4ef}
+.ind35-g em{color:#a6b3ab}
 
 :root{color-scheme:dark;--line:#24302a;--paper:#0c1410;--g1:#132a1d;--ink:#e6ece8;--muted:#a6b3ab;--white:#141d18}
 html,body{background:#0c1410!important;color:#e6ece8}
@@ -5423,6 +5441,7 @@ input,select,textarea{background:#101914!important;color:#e6ece8!important;borde
 .pk32-o.on{border-color:#6fcf96!important}
 .pk32-o.on::before{background-color:#2f9e5f;border-color:#2f9e5f}
 .ind32-b small{color:#a6b3ab}
+.ind35-g em{color:#a6b3ab}
 }</style>
 </body>
 </html>
