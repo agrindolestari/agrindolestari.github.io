@@ -1892,6 +1892,35 @@ html{-webkit-tap-highlight-color:transparent}
 .oem19,.tc19,.pc14-img,.ph,.oth19-im,.pimg11{position:relative;overflow:hidden}
 .wb29{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:fill!important;padding:0!important;margin:0!important;border:0!important;z-index:0;pointer-events:none;transform:none!important;filter:none!important}
 .oem19>img:not(.wb29),.tc19>img:not(.wb29),.pc14-img>img:not(.wb29),.ph>img:not(.wb29),.oth19-im>img:not(.wb29),.pimg11>img:not(.wb29),.tc19>*:not(.wb29){position:relative;z-index:1}
+/* ---------- round 32 ---------- */
+.ind12-u li::before{width:6px;height:6px;border-radius:50%;top:.52em;left:2px}
+.ind32-m{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ind32-b{background:#f6f8f7;border:1px solid #e3e9e5;border-radius:2px;padding:10px 12px}
+.ind32-b small{display:block;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#6b766f;margin-bottom:7px}
+.ind32-b div{display:flex;flex-wrap:wrap;gap:5px}
+.ind12-m.ind32-m span{font-size:.76rem;font-weight:700;color:var(--g9);background:#fff;border:1px solid #dfe6e1;padding:4px 8px;border-radius:2px}
+.qform11 .f32{display:block;margin-bottom:16px}
+.qform11 .f32>span{display:block;font-size:.76rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--g9);margin-bottom:7px}
+.pk32{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-radius:2px}
+.pk32.err{outline:2px solid #d9534f;outline-offset:4px}
+.pk32-o{position:relative;display:flex;align-items:center;gap:9px;min-height:46px;padding:8px 12px;border:1px solid #cfd6d2;border-radius:2px;background:#fff;cursor:pointer;font-size:.86rem;font-weight:600;color:var(--ink);line-height:1.25;box-sizing:border-box}
+.qform11 .pk32-o input{position:absolute;opacity:0;width:1px;height:1px;margin:0;padding:0;border:0;pointer-events:none}
+.pk32-o::before{content:"";flex:0 0 16px;width:16px;height:16px;border:1.5px solid #9aa6a0;border-radius:2px;background:#fff center/11px no-repeat}
+.pk32-o.on{border-color:var(--g6);background:#f2f7f4}
+.pk32-o.on::before{background-color:var(--g6);border-color:var(--g6);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6.2l2.6 2.6L10 3.4' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E")}
+.pk32-o:focus-within{border-color:var(--g6)}
+.it32{display:grid;gap:10px;margin-bottom:16px}
+.it32:empty{display:none}
+.it32-r{border:1px solid #e1e7e3;border-left:3px solid var(--y5);background:#fafbfa;padding:12px 14px 0;border-radius:2px}
+.it32-r>b{display:block;font-size:.92rem;color:var(--g9);margin-bottom:10px}
+.it32-f{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.it32-f label.f{margin-bottom:14px}
+@media (max-width:640px){
+  .pk32{grid-template-columns:1fr 1fr}
+  .it32-f{grid-template-columns:1fr;gap:0}
+  .ind32-m{grid-template-columns:1fr}
+}
+#matGaskets .mt12:last-child:nth-child(odd){grid-column:1/-1}
 </style>
 <script>if(location.hostname==="agrindolestari.github.io"){var s=document.createElement("script");s.async=1;s.src="https://www.googletagmanager.com/gtag/js?id=G-1BFHBXH0L4";document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag("js",new Date());gtag("config","G-1BFHBXH0L4");addEventListener("hashchange",function(){gtag("event","page_view",{page_location:location.href,page_title:document.title});});}</script>
 <meta name="google-site-verification" content="M20Ci52eR5CdUbxVOi6yWMHlW7NEDv_aOt4JY5xxwos">
@@ -2101,14 +2130,10 @@ html{-webkit-tap-highlight-color:transparent}
         <label class="f"><span data-i18n="lName"></span><input id="f-name" required autocomplete="name"></label>
         <label class="f"><span data-i18n="lCompany"></span><input id="f-company" autocomplete="organization"></label>
       </div>
-      <div class="frow">
-        <label class="f"><span data-i18n="lProduct"></span><select id="f-product"></select></label>
-        <label class="f"><span data-i18n="lModel"></span><input id="f-model" data-i18n-ph="phModel"></label>
-      </div>
-      <div class="frow">
-        <label class="f"><span data-i18n="lQty"></span><input id="f-qty" data-i18n-ph="phQty"></label>
-        <label class="f"><span data-i18n="lMat"></span><select id="f-mat"></select></label>
-      </div>
+      <label class="f"><span data-i18n="lModel"></span><input id="f-model" data-i18n-ph="phModel"></label>
+      <select id="f-product" hidden aria-hidden="true" tabindex="-1"></select>
+      <div class="f f32"><span id="f-prods-l"></span><div class="pk32" id="f-prods" role="group" aria-labelledby="f-prods-l"></div></div>
+      <div class="it32" id="f-items"></div>
       <label class="f"><span data-i18n="lMsg"></span><textarea id="f-msg" rows="4" data-i18n-ph="phMsg"></textarea></label>
       <button class="btn11 btn11-y btn11-block" type="submit" data-i18n="fSend"></button>
       <p class="note11" data-i18n="fSub"></p>
@@ -4544,6 +4569,185 @@ const _render29 = render; render = function(){ _render29(); wb29(); };
 addEventListener("hashchange", () => setTimeout(wb29, 60));
 addEventListener("load", () => setTimeout(wb29, 300));
 
+/* ===================== round 32: user feedback ===================== */
+// ---------- one gasket material list everywhere (dad's confirmed list) ----------
+const EL32 = {
+  "NBR":     {max:120, min:-20, full:{en:"Nitrile rubber (NBR)", id:"Karet nitril (NBR)", zh:"丁腈橡胶 (NBR)"},
+    en:"Standard nitrile rubber. Vegetable oils, fats and fatty media, and water at moderate temperatures.",
+    id:"Karet nitril standar. Minyak nabati, lemak, media berlemak dan air pada suhu sedang.",
+    zh:"普通丁腈橡胶。适用于中等温度下的植物油、油脂、含油介质和水。"},
+  "NBR P":   {max:140, min:-20, full:{en:"Peroxide-cured nitrile (NBR P)", id:"Nitril vulkanisasi peroksida (NBR P)", zh:"过氧化物硫化丁腈橡胶 (NBR P)"},
+    en:"The same nitrile rubber, cured with peroxide instead of sulphur. Same oil resistance as NBR, but it keeps its seal longer at higher temperatures and in hot water.",
+    id:"Karet nitril yang sama, divulkanisasi dengan peroksida, bukan sulfur. Ketahanan minyaknya sama dengan NBR, tetapi tetap rapat lebih lama pada suhu lebih tinggi dan air panas.",
+    zh:"同为丁腈橡胶，但以过氧化物代替硫磺硫化。耐油性与 NBR 相同，在较高温度和热水中密封寿命更长。"},
+  "HTNBR":   {max:140, min:-20, full:{en:"High-temperature nitrile (HTNBR)", id:"Nitril suhu tinggi (HTNBR)", zh:"耐高温丁腈橡胶 (HTNBR)"},
+    en:"A nitrile compound formulated for heat. Made for hot oils and fatty media just above the range of standard NBR.",
+    id:"Kompon nitril yang diformulasikan untuk panas. Untuk minyak panas dan media berlemak sedikit di atas batas NBR standar.",
+    zh:"专为耐热配制的丁腈胶料。适用于略高于普通 NBR 温度范围的热油和含油介质。"},
+  "HNBR":    {max:150, min:-20, full:{en:"Hydrogenated nitrile (HNBR)", id:"Nitril terhidrogenasi (HNBR)", zh:"氢化丁腈橡胶 (HNBR)"},
+    en:"Hydrogenated nitrile, the strongest of the nitrile family. The highest temperature limit, the best ageing resistance and the longest life in hot oils and fats.",
+    id:"Nitril terhidrogenasi, yang paling kuat di keluarga nitril. Batas suhu tertinggi, paling tahan penuaan dan paling awet pada minyak dan lemak panas.",
+    zh:"氢化丁腈橡胶，丁腈系列中性能最强。耐温最高、耐老化最好，在热油和油脂中寿命最长。"},
+  "EPDM":    {max:150, min:-30, full:{en:"Ethylene propylene (EPDM)", id:"Etilena propilena (EPDM)", zh:"三元乙丙橡胶 (EPDM)"},
+    en:"Hot water, steam and many CIP cleaning chemicals. Not for oils or fats.",
+    id:"Air panas, uap dan banyak bahan kimia pembersih CIP. Tidak untuk minyak atau lemak.",
+    zh:"热水、蒸汽及多数 CIP 清洗化学品。不适用于油类或油脂。"},
+  "Viton A": {max:170, min:-10, full:{en:"Fluoroelastomer (Viton A)", id:"Fluoroelastomer (Viton A)", zh:"氟橡胶 (Viton A)"},
+    en:"Fluoroelastomer for mineral oils, fuels and many acids at high temperatures.",
+    id:"Fluoroelastomer untuk minyak mineral, bahan bakar dan banyak asam pada suhu tinggi.",
+    zh:"氟橡胶，适用于高温下的矿物油、燃料及多种酸。"},
+  "Viton G": {max:180, min:-10, full:{en:"Fluoroelastomer (Viton G)", id:"Fluoroelastomer (Viton G)", zh:"氟橡胶 (Viton G)"},
+    en:"Fluoroelastomer for aggressive chemicals and acids, with better resistance to steam and hot water than Viton A.",
+    id:"Fluoroelastomer untuk bahan kimia agresif dan asam, lebih tahan uap dan air panas dibanding Viton A.",
+    zh:"氟橡胶，适用于强腐蚀化学品和酸，耐蒸汽和热水性能优于 Viton A。"}
+};
+const PL32 = ["AISI 304","AISI 316L","Titanium","SMO 254","Hastelloy C-276","Nickel 200/201"];
+const FG32 = {en:"Food-grade (FDA-compliant) NBR and EPDM available for food, beverage and dairy duties.",
+              id:"Tersedia NBR dan EPDM food-grade (sesuai FDA) untuk makanan, minuman dan susu.",
+              zh:"可提供食品级（符合 FDA）NBR 和 EPDM，用于食品、饮料和乳品工况。"};
+(function(){
+  Object.keys(ELAST16).forEach(k => delete ELAST16[k]);
+  Object.keys(EL32).forEach(k => { const e = EL32[k]; ELAST16[k] = {t:"up to " + e.max + " °C", en:e.en, id:e.id, zh:e.zh}; });
+  // products page overview lists
+  const GS = {en:{"NBR":"Oils, fats and water","NBR P":"Oils and fats, better heat resistance","HTNBR":"Hotter oils","HNBR":"Hot oils, longest life","EPDM":"Water, steam, CIP","Viton A":"Mineral oils, acids","Viton G":"Aggressive chemicals, steam"},
+              id:{"NBR":"Minyak, lemak dan air","NBR P":"Minyak dan lemak, lebih tahan panas","HTNBR":"Minyak lebih panas","HNBR":"Minyak panas, paling awet","EPDM":"Air, uap, CIP","Viton A":"Minyak mineral, asam","Viton G":"Kimia agresif, uap"},
+              zh:{"NBR":"油脂和水","NBR P":"油类和油脂，耐热性更好","HTNBR":"较高温度油品","HNBR":"高温油品，寿命最长","EPDM":"水、蒸汽、CIP","Viton A":"矿物油、酸","Viton G":"强腐蚀化学品、蒸汽"}};
+  ["en","id","zh"].forEach(l => { T[l].gaskets = Object.keys(EL32).map(k => [k, GS[l][k]]); });
+  // material selection guide: all seven elastomers
+  if (typeof MAT !== "undefined") { Object.keys(MAT).forEach(k => delete MAT[k]); Object.keys(EL32).forEach(k => MAT[k] = [EL32[k].min, EL32[k].max]); }
+  if (typeof SUIT !== "undefined") Object.assign(SUIT, {
+    oil:["NBR","NBR P","HTNBR","HNBR","Viton A"], glyc:["NBR","NBR P","HTNBR","HNBR","Viton A"],
+    water:["EPDM","Viton G"], food:["EPDM","NBR","NBR P","HNBR"], chem:["Viton A","Viton G","EPDM"]});
+  ["en","id","zh"].forEach(l => { T[l].matD = {}; Object.keys(EL32).forEach(k => T[l].matD[k] = [EL32[k].full[l], EL32[k][l]]); });
+  // product data
+  const g = PRODUCTS.find(p => p.id === "phe-gaskets"), pl = PRODUCTS.find(p => p.id === "phe-plates");
+  if (g) {
+    g.chips = Object.keys(EL32);
+    if (!g.specs.some(r => r[0] === "Food grade")) g.specs.splice(3, 0, ["Food grade", FG32.en.replace(" available for food, beverage and dairy duties", " on request"), "Food grade", "食品级"]);
+  }
+  if (pl) {
+    pl.chips = PL32.slice();
+    pl.short = {en:"Replacement plates in AISI 304 / 316L, Titanium, SMO 254, Hastelloy C-276 and Nickel 200/201.",
+                id:"Plate pengganti dari AISI 304 / 316L, Titanium, SMO 254, Hastelloy C-276 dan Nickel 200/201.",
+                zh:"AISI 304 / 316L、钛、SMO 254、哈氏合金 C-276 和镍 200/201 材质替换板片。"};
+    pl.specs.forEach(r => { if (r[0] === "Plate materials") r[1] = PL32.join(" · "); });
+  }
+  const APPS32 = {en:["Fats and oils","Oleochemical plants","Chemical industry","Food & beverage","Dairy & milk processing","Power plants","Marine vessels"],
+                  id:["Minyak dan lemak","Pabrik oleokimia","Industri kimia","Makanan & minuman","Pengolahan susu","Pembangkit listrik","Kapal laut"],
+                  zh:["油脂加工","油脂化工厂","化工行业","食品饮料","乳品加工","发电厂","船舶"]};
+  PRODUCTS.forEach(p => { if (p.apps && p.apps.en && p.apps.en[0] === "Palm oil refineries") p.apps = JSON.parse(JSON.stringify(APPS32)); });
+  if (typeof PS19 !== "undefined" && PS19["phe-gaskets"]) PS19["phe-gaskets"] = {en:"NBR to Viton, clip-on or glued", id:"NBR hingga Viton, clip-on atau lem", zh:"NBR 至氟橡胶，卡扣式或粘接式"};
+  // services: no claim of in-house production
+  const SV = {en:["Gaskets made to order","Made to match your plate model in NBR, NBR P, HTNBR, HNBR, EPDM or Viton A / G, including food-grade (FDA-compliant) grades."],
+              id:["Gasket sesuai pesanan","Disesuaikan dengan model plate Anda, dari NBR, NBR P, HTNBR, HNBR, EPDM atau Viton A / G, termasuk grade food-grade (sesuai FDA)."],
+              zh:["按需定制垫片","按您的板片型号匹配，材质可选 NBR、NBR P、HTNBR、HNBR、EPDM 或 Viton A / G，包括符合 FDA 的食品级。"]};
+  ["en","id","zh"].forEach(l => { if (Array.isArray(T[l].svcs) && T[l].svcs[1]) T[l].svcs[1] = SV[l]; });
+  // 3D model: part 3 is the whole unit, not the bolts on their own
+  Object.assign(T.en.hs3d.frame, {t:"Complete PHE unit", d:"Frame, tightening bolts, plates and gaskets together make a complete unit. We supply new units sized to your process data.", a:"View PHE units"});
+  Object.assign(T.id.hs3d.frame, {t:"Unit PHE lengkap", d:"Rangka, baut pengencang, plate dan gasket membentuk satu unit lengkap. Kami menyediakan unit baru sesuai data proses Anda.", a:"Lihat unit PHE"});
+  Object.assign(T.zh.hs3d.frame, {t:"完整板式换热器机组", d:"框架、夹紧螺栓、板片和垫片共同组成完整机组。我们按您的工艺数据提供新机组。", a:"查看机组"});
+  // quotation form text
+  Object.assign(T.en, {fProds:"Products (choose one or more)", fNeedProd:"Choose at least one product", fQty:"Quantity", fGMat:"Gasket material", fPMat:"Plate material",
+    fQtyPh:{"phe-gaskets":"e.g. 1 set / 20 pcs","phe-plates":"e.g. 10 plates","phe-units":"e.g. 1 unit","spiral-hx":"e.g. 1 unit","graphite":"e.g. 2 sheets / 10 pcs","other":"Describe the item"},
+    indG:"Gaskets", indP:"Plates", foodNote:FG32.en});
+  Object.assign(T.id, {fProds:"Produk (pilih satu atau lebih)", fNeedProd:"Pilih minimal satu produk", fQty:"Jumlah", fGMat:"Material gasket", fPMat:"Material plate",
+    fQtyPh:{"phe-gaskets":"mis. 1 set / 20 pcs","phe-plates":"mis. 10 plate","phe-units":"mis. 1 unit","spiral-hx":"mis. 1 unit","graphite":"mis. 2 lembar / 10 pcs","other":"Jelaskan barangnya"},
+    indG:"Gasket", indP:"Plate", foodNote:FG32.id});
+  Object.assign(T.zh, {fProds:"产品（可多选）", fNeedProd:"请至少选择一种产品", fQty:"数量", fGMat:"垫片材质", fPMat:"板片材质",
+    fQtyPh:{"phe-gaskets":"如 1 套 / 20 件","phe-plates":"如 10 片","phe-units":"如 1 台","spiral-hx":"如 1 台","graphite":"如 2 张 / 10 件","other":"请描述所需物品"},
+    indG:"垫片", indP:"板片", foodNote:FG32.zh});
+})();
+
+// ---------- industries: gasket and plate materials in two boxes ----------
+const IND32 = [ // [gaskets, plates] per industry, same order as T.inds
+  [["NBR","NBR P","HTNBR","HNBR"], ["AISI 316L"]],
+  [["EPDM","Viton A","Viton G"], ["Titanium","SMO 254","Hastelloy C-276","Nickel 200/201"]],
+  [["Food-grade NBR","Food-grade EPDM"], ["AISI 316L"]],
+  [["Food-grade NBR","Food-grade EPDM"], ["AISI 316L"]],
+  [["NBR","EPDM"], ["AISI 316L","Titanium"]],
+  [["NBR","EPDM"], ["Titanium"]]
+];
+const FGW32 = {en:"Food-grade", id:"Food-grade", zh:"食品级"};
+function ind32(){
+  const t = L();
+  document.querySelectorAll(".ind12-m").forEach((box, i) => {
+    const d = IND32[i]; if (!d) return;
+    const chip = m => `<span>${m.replace("Food-grade", FGW32[lang] || "Food-grade").replace("Titanium", lang === "zh" ? "钛" : "Titanium")}</span>`;
+    box.classList.add("ind32-m");
+    box.innerHTML = `<div class="ind32-b"><small>${t.indG}</small><div>${d[0].map(chip).join("")}</div></div><div class="ind32-b"><small>${t.indP}</small><div>${d[1].map(chip).join("")}</div></div>`;
+  });
+}
+
+// ---------- gasket page: material descriptions ----------
+elast16 = function(m){
+  const box = document.getElementById("el16"); if (!box) return;
+  box.querySelectorAll("button").forEach(b => b.classList.toggle("on", b.dataset.m === m));
+  const e = EL32[m]; if (!e) return;
+  const up = {en:"up to", id:"hingga", zh:"最高"}[lang] || "up to";
+  box.querySelector(".el16-out").innerHTML = `<b>${e.full[lang] || e.full.en} · ${up} ${e.max} °C</b><span>${e[lang] || e.en}</span>`;
+};
+
+// ---------- links: old "#/product/x" form goes straight to the product ----------
+function fixLinks32(root){
+  (root || document).querySelectorAll('a[href^="#/product/"]').forEach(a => a.setAttribute("href", "#product-" + a.getAttribute("href").split("/")[2]));
+}
+(function(){
+  const h = location.hash; if (h.startsWith("#/product/")) history.replaceState(null, "", "#product-" + h.split("/")[2]);
+  addEventListener("hashchange", () => { const x = location.hash; if (x.startsWith("#/product/")) location.replace("#product-" + x.split("/")[2]); }, true);
+})();
+
+// ---------- quotation form: several products, materials per product ----------
+const Q32 = {}; // id -> {qty, mat}
+function prodList32(){ return PRODUCTS.map(p => [p.id, p.name[lang]]).concat([["other", L().other || "Other"]]); }
+function q32Render(){
+  const box = document.getElementById("f-prods"), items = document.getElementById("f-items"); if (!box || !items) return;
+  const t = L(), lab = document.getElementById("f-prods-l"); if (lab) lab.textContent = t.fProds;
+  box.innerHTML = prodList32().map(([id, n]) => `<label class="pk32-o${Q32[id] ? " on" : ""}"><input type="checkbox" value="${id}"${Q32[id] ? " checked" : ""}><span>${n}</span></label>`).join("");
+  box.querySelectorAll("input").forEach(c => c.onchange = () => { if (c.checked) Q32[c.value] = Q32[c.value] || {qty:"", mat:""}; else delete Q32[c.value]; box.classList.remove("err"); q32Render(); });
+  const matSel = (id, list, cur) => `<select data-k="mat" data-id="${id}"><option value="" disabled${cur ? "" : " selected"} hidden>${t.matPick}</option>${list.map(m => `<option${m === cur ? " selected" : ""}>${m}</option>`).join("")}<option value="${t.matOther}"${cur === t.matOther ? " selected" : ""}>${t.matOther}</option></select>`;
+  items.innerHTML = prodList32().filter(([id]) => Q32[id]).map(([id, n]) => {
+    const q = Q32[id], mat = id === "phe-gaskets" ? [t.fGMat, Object.keys(EL32)] : id === "phe-plates" ? [t.fPMat, PL32] : null;
+    return `<div class="it32-r"><b>${n}</b><div class="it32-f"><label class="f"><span>${t.fQty}</span><input data-k="qty" data-id="${id}" value="${(q.qty || "").replace(/"/g, "&quot;")}" placeholder="${t.fQtyPh[id] || ""}"></label>${mat ? `<label class="f"><span>${mat[0]}</span>${matSel(id, mat[1], q.mat)}</label>` : ""}</div></div>`;
+  }).join("");
+  items.querySelectorAll("[data-k]").forEach(el => el.oninput = el.onchange = () => { if (Q32[el.dataset.id]) Q32[el.dataset.id][el.dataset.k] = el.value; });
+}
+function q32Pick(id, mat){
+  Object.keys(Q32).forEach(k => delete Q32[k]);
+  if (id) Q32[id] = {qty:"", mat:mat || ""};
+  q32Render();
+}
+quoteFor = function(id){ location.hash = "#contact"; setTimeout(() => { q32Pick(id); const n = $("#f-name"); if (n) n.focus({preventScroll:true}); }, 120); };
+pf12 = function(brand){ setTimeout(() => { const m = $("#f-model"); if (m && brand) m.value = brand + " "; if (!Object.keys(Q32).length) q32Pick("phe-gaskets"); }, 120); };
+prefill = function(mat){
+  setTimeout(() => { q32Pick("phe-gaskets", EL32[mat] ? mat : ""); const m = $("#f-msg"); const md = (L().media.find(x => x[0] === media) || [])[2] || ""; if (m) m.value = `${md}, max ${$("#temp").value} °C${EL32[mat] ? " → " + mat + "?" : ""}`; }, 80);
+};
+sendInquiry = function(){
+  const v = id => ($("#" + id) ? $("#" + id).value.trim() : "");
+  if (!v("f-name")) { $("#f-name").focus(); return; }
+  const ids = prodList32().filter(([id]) => Q32[id]);
+  if (!ids.length) { const b = document.getElementById("f-prods"); if (b) { b.classList.add("err"); b.scrollIntoView({block:"center", behavior:"smooth"}); } return; }
+  const t = T.en;
+  const lines = ids.map(([id], i) => { const q = Q32[id], n = (PRODUCTS.find(p => p.id === id) || {name:{en:"Other"}}).name.en;
+    let s = `${i + 1}. ${n}`; if (q.qty) s += `, quantity: ${q.qty}`; if (q.mat) s += `, ${id === "phe-plates" ? "plate" : "gasket"} material: ${q.mat}`; return s; }).join("\n");
+  const body = `Hello Agrindo Lestari,\n\nName: ${v("f-name")}\nCompany: ${v("f-company")}\nPHE brand / model / serial no.: ${v("f-model")}\n\nProducts:\n${lines}\n\n${v("f-msg")}`;
+  const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(body)}`;
+  let w = null; try { w = window.open(url, "_blank"); } catch(e) {}
+  if (!w) { const x = document.createElement("a"); x.href = url; x.target = "_blank"; x.rel = "noopener"; document.body.appendChild(x); x.click(); x.remove(); }
+};
+
+// ---------- hook into rendering ----------
+const _render32 = render;
+render = function(){ _render32(); ind32(); q32Render(); fixLinks32(); };
+const _renderArticle32 = renderArticle;
+renderArticle = function(id){
+  _renderArticle32(id);
+  const a = document.getElementById("article"); if (!a) return;
+  fixLinks32(a);
+  if (id === "phe-gaskets" && document.getElementById("el16")) { const on = a.querySelector(".el16-b button.on"); elast16(on ? on.dataset.m : "NBR"); }
+};
+// back to top: inline onclick resolved to the button's own scrollTo, so the page never moved
+(function(){ const b = document.getElementById("totop"); if (b) b.onclick = () => window.scrollTo({top:0, behavior:"smooth"}); })();
+
 $("#yr").textContent = new Date().getFullYear();
 $$(".lang button").forEach(b => b.onclick = () => { lang = b.dataset.lang; try { localStorage.setItem("agl-lang", lang); } catch(e) {} render(); });
 if ($("#temp")) $("#temp").addEventListener("input", finder);
@@ -4783,9 +4987,9 @@ let interacted = false, idle = 0, T0 = performance.now();
 
 // ---------- hotspots ----------
 const HSDEF = [
-  {k:"plates", at:()=>PLATES[14].position.clone().add(new THREE.Vector3(0, -PH*0.16, PW/2-0.02)), n:new THREE.Vector3(0,0,1), mat:[ssPlate], go:"#/product/phe-plates", dir:new THREE.Vector3(-0.25,0.12,1), open:0},
-  {k:"gaskets", at:()=>GASK[LI].position.clone().add(new THREE.Vector3(0, PH*0.3, 0)), n:new THREE.Vector3(-0.3,0,1), mat:[rubber], go:"#/product/phe-gaskets", dir:new THREE.Vector3(-0.42,0.2,1), open:1},
-  {k:"frame", at:()=>pp.position.clone().add(new THREE.Vector3(0.05, PH*0.36, pWd/2)), n:new THREE.Vector3(0.3,0,1), mat:[paint], go:"#/product/phe-units", dir:new THREE.Vector3(0.55,0.2,1), open:0},
+  {k:"plates", at:()=>PLATES[14].position.clone().add(new THREE.Vector3(0, -PH*0.16, PW/2-0.02)), n:new THREE.Vector3(0,0,1), mat:[ssPlate], go:"#product-phe-plates", dir:new THREE.Vector3(-0.25,0.12,1), open:0},
+  {k:"gaskets", at:()=>GASK[LI].position.clone().add(new THREE.Vector3(0, PH*0.3, 0)), n:new THREE.Vector3(-0.3,0,1), mat:[rubber], go:"#product-phe-gaskets", dir:new THREE.Vector3(-0.42,0.2,1), open:1},
+  {k:"frame", at:()=>pp.position.clone().add(new THREE.Vector3(0.05, PH*0.36, pWd/2)), n:new THREE.Vector3(0.3,0,1), mat:[paint], go:"#product-phe-units", dir:new THREE.Vector3(0.55,0.2,1), open:0},
   {k:"nameplate", at:()=>np.position.clone(), n:new THREE.Vector3(-1,0,0), mat:[nameplate], go:"#contact", dir:new THREE.Vector3(-1,0.12,0.42), open:0}
 ];
 const hsWrap = document.createElement("div"); hsWrap.className = "h3d-hs"; host.appendChild(hsWrap);
@@ -5019,6 +5223,7 @@ header.solid{background:#141d18}
 .stats11 b{color:#eef4ef}
 .stats11 span{color:#a6b3ab}
 .pcard11{background:#141d18}
+.pcard11:hover{background:#101914}
 .pimg11{background:#141d18}
 .pbody11 h3{color:#eef4ef}
 .pbody11 p{color:#a6b3ab}
@@ -5151,6 +5356,14 @@ form select, .form select, #quote select, select.f-in, select{background-color:#
 @media(max-width:640px){.art-main table th{color:#a6b3ab}}
 html,body{background-color:#141d18}
 .oem19,.tc19:not(:has(.tc15-wm)),.pc14-img,.ph,.oth19-im,.pimg11{background-color:#141d18}
+.ind32-b{background:#101914}
+.ind32-b small{color:#a6b3ab}
+.ind12-m.ind32-m span{color:#eef4ef;background:#141d18}
+.qform11 .f32>span{color:#eef4ef}
+.pk32-o{background:#141d18;color:#e6ece8}
+.pk32-o.on{background:#132a1d}
+.it32-r{background:#101914}
+.it32-r>b{color:#eef4ef}
 
 :root{color-scheme:dark;--line:#24302a;--paper:#0c1410;--g1:#132a1d;--ink:#e6ece8;--muted:#a6b3ab;--white:#141d18}
 html,body{background:#0c1410!important;color:#e6ece8}
@@ -5162,6 +5375,12 @@ input,select,textarea{background:#101914!important;color:#e6ece8!important;borde
 .el16-b button.on{background:#f5c400!important;color:#072a18!important;border-color:#f5c400!important}
 .burger{color:#e6ece8!important}
 .logo b{color:#fff!important}
+.pk32-o,.it32-r,.ind32-b,.ind12-m.ind32-m span{border-color:#2c3a33!important}
+.it32-r{border-left-color:#f5c400!important}
+.pk32-o::before{background-color:#101914;border-color:#5d6b64}
+.pk32-o.on{border-color:#6fcf96!important}
+.pk32-o.on::before{background-color:#2f9e5f;border-color:#2f9e5f}
+.ind32-b small{color:#a6b3ab}
 }</style>
 </body>
 </html>
